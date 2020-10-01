@@ -1,0 +1,24 @@
+File ~/oceanography/ROMS/data/Camotes_Sea_Connectivity_Matrices_08_day_PLD_2019.nc (NC_FORMAT_NETCDF4):
+
+     3 variables (excluding dimension variables):
+        string date_string[time_len,time]   (Chunking: [10,1])  
+            long_name: YYYY-MM-DD
+        string source_region[src_len,source]   (Contiguous storage)  
+            long_name: name of source/ sink regions
+        double connectivity_fraction[sink,source,time]   (Chunking: [28,28,1])  
+            long_name: fraction of source particles that make it to sink locations
+
+     5 dimensions:
+        time  Size:1274   *** is unlimited ***
+[1] "vobjtovarid4: **** WARNING **** I was asked to get a varid for dimension named time BUT this dimension HAS NO DIMVAR! Code will probably fail at this point"
+        time_len  Size:10
+[1] "vobjtovarid4: **** WARNING **** I was asked to get a varid for dimension named time_len BUT this dimension HAS NO DIMVAR! Code will probably fail at this point"
+        source  Size:28
+[1] "vobjtovarid4: **** WARNING **** I was asked to get a varid for dimension named source BUT this dimension HAS NO DIMVAR! Code will probably fail at this point"
+        src_len  Size:17
+[1] "vobjtovarid4: **** WARNING **** I was asked to get a varid for dimension named src_len BUT this dimension HAS NO DIMVAR! Code will probably fail at this point"
+        sink  Size:28
+[1] "vobjtovarid4: **** WARNING **** I was asked to get a varid for dimension named sink BUT this dimension HAS NO DIMVAR! Code will probably fail at this point"
+
+    1 global attributes:
+        title: Camotes Sea connectivity after 08 days

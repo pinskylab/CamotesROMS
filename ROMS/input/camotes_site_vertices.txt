@@ -1,0 +1,25 @@
+site id_number
+Palanas 39858
+Wangag 39556
+Magbangon 38650
+Cabatoan 38348
+Caridad_Proper 36537
+Caridad_Proper 36235
+Caridad_Cemetery 35933
+Hicgop 34725
+Hicgop 34423
+Sitio_Tugas 34120
+Elementary_School 33516
+Sitio_Lonas 31703
+San_Agustin 31400
+Poroc_San_Flowers 31097
+Poroc_Rose 30492
+Pangasugan 30189
+Visca 29886
+Gabas 28677
+Tamakin_Dacot 25038
+Haina 24734
+Haina 24433
+Sitio_Baybayon 24732
+Sitio_Baybayon 24430
+
