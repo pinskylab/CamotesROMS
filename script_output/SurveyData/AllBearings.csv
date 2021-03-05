@@ -1,362 +1,626 @@
-"site_i","site_j","direction"
-"Cabatoan","Cabatoan","-180"
-"Cabatoan","Caridad Cemetery","134.153516624325"
-"Cabatoan","Caridad Proper","136.506607956546"
-"Cabatoan","Elementary School","144.077342191628"
-"Cabatoan","Gabas","152.749797448597"
-"Cabatoan","Haina","165.941235246517"
-"Cabatoan","Hicgop South","139.127392614459"
-"Cabatoan","Magbangon","-48.2467959258639"
-"Cabatoan","Palanas","-40.2972072002161"
-"Cabatoan","Poroc Rose","150.05370656246"
-"Cabatoan","Poroc San Flower","147.730237502816"
-"Cabatoan","San Agustin","147.06569730581"
-"Cabatoan","Sitio Baybayon","167.637630940272"
-"Cabatoan","Sitio Lonas","145.642370589779"
-"Cabatoan","Sitio Tugas","141.742052213441"
-"Cabatoan","Tamakin Dacot","164.514629259158"
-"Cabatoan","Visca","152.115016634039"
-"Cabatoan","Wangag","-37.3187875086943"
-"Cabatoan","CAI","-120.504385917649"
-"Caridad Cemetery","Cabatoan","-45.8427388460445"
-"Caridad Cemetery","Caridad Cemetery","-180"
-"Caridad Cemetery","Caridad Proper","145.925788206176"
-"Caridad Cemetery","Elementary School","150.387453273624"
-"Caridad Cemetery","Gabas","157.012180368359"
-"Caridad Cemetery","Haina","170.121070089305"
-"Caridad Cemetery","Hicgop South","144.013780212461"
-"Caridad Cemetery","Magbangon","-46.0249196157901"
-"Caridad Cemetery","Palanas","-43.2530495724859"
-"Caridad Cemetery","Poroc Rose","154.886358449077"
-"Caridad Cemetery","Poroc San Flower","152.259556601648"
-"Caridad Cemetery","San Agustin","151.665726268525"
-"Caridad Cemetery","Sitio Baybayon","171.940509523306"
-"Caridad Cemetery","Sitio Lonas","150.029573037347"
-"Caridad Cemetery","Sitio Tugas","147.532405753125"
-"Caridad Cemetery","Tamakin Dacot","168.761941653628"
-"Caridad Cemetery","Visca","156.965363685512"
-"Caridad Cemetery","Wangag","-42.3277397200538"
-"Caridad Cemetery","CAI","-116.028723868849"
-"Caridad Proper","Cabatoan","-43.4889148239369"
-"Caridad Proper","Caridad Cemetery","-34.0734787702811"
-"Caridad Proper","Caridad Proper","-180"
-"Caridad Proper","Elementary School","151.236405918655"
-"Caridad Proper","Gabas","157.695937923541"
-"Caridad Proper","Haina","170.963105985298"
-"Caridad Proper","Hicgop South","143.389663863296"
-"Caridad Proper","Magbangon","-43.7824931806984"
-"Caridad Proper","Palanas","-42.1707984423407"
-"Caridad Proper","Poroc Rose","155.632002207554"
-"Caridad Proper","Poroc San Flower","152.842292137352"
-"Caridad Proper","San Agustin","152.232917174843"
-"Caridad Proper","Sitio Baybayon","172.825243971682"
-"Caridad Proper","Sitio Lonas","150.467152942488"
-"Caridad Proper","Sitio Tugas","147.913872718048"
-"Caridad Proper","Tamakin Dacot","169.608265738347"
-"Caridad Proper","Visca","157.775053991255"
-"Caridad Proper","Wangag","-41.2660653129107"
-"Caridad Proper","CAI","-114.880210073211"
-"Elementary School","Cabatoan","-35.9148809513492"
-"Elementary School","Caridad Cemetery","-29.6085115406954"
-"Elementary School","Caridad Proper","-28.7602917195455"
-"Elementary School","Elementary School","-180"
-"Elementary School","Gabas","160.801188659698"
-"Elementary School","Haina","175.382599762361"
-"Elementary School","Hicgop South","-18.1240858579954"
-"Elementary School","Magbangon","-36.2976474838469"
-"Elementary School","Palanas","-37.033981123292"
-"Elementary School","Poroc Rose","159.054467662235"
-"Elementary School","Poroc San Flower","154.349855925314"
-"Elementary School","San Agustin","153.313049838672"
-"Elementary School","Sitio Baybayon","177.5236382489"
-"Elementary School","Sitio Lonas","149.492209067726"
-"Elementary School","Sitio Tugas","-15.5622090669565"
-"Elementary School","Tamakin Dacot","174.0556501822"
-"Elementary School","Visca","161.881260889963"
-"Elementary School","Wangag","-36.2166495438823"
-"Elementary School","CAI","-108.86545556504"
-"Gabas","Cabatoan","-27.2377699285666"
-"Gabas","Caridad Cemetery","-22.979120666496"
-"Gabas","Caridad Proper","-22.2960947839788"
-"Gabas","Elementary School","-19.1941424943148"
-"Gabas","Gabas","-180"
-"Gabas","Haina","-172.166500970015"
-"Gabas","Hicgop South","-19.0097312733529"
-"Gabas","Magbangon","-27.5555684504161"
-"Gabas","Palanas","-29.0979443230389"
-"Gabas","Poroc Rose","-16.3717262227435"
-"Gabas","Poroc San Flower","-12.4756707689297"
-"Gabas","San Agustin","-13.2661627108708"
-"Gabas","Sitio Baybayon","-169.035847518264"
-"Gabas","Sitio Lonas","-12.4697922434678"
-"Gabas","Sitio Tugas","-18.8696247638834"
-"Gabas","Tamakin Dacot","-172.812461391661"
-"Gabas","Visca","-22.7139735529679"
-"Gabas","Wangag","-28.424617748148"
-"Gabas","CAI","-96.5654431262601"
-"Haina","Cabatoan","-14.0486382022808"
-"Haina","Caridad Cemetery","-9.87252019880261"
-"Haina","Caridad Proper","-9.03121247634307"
-"Haina","Elementary School","-4.61500073361231"
-"Haina","Gabas","7.83125570056629"
-"Haina","Haina","-180"
-"Haina","Hicgop South","-5.81486277745863"
-"Haina","Magbangon","-14.3738666235381"
-"Haina","Palanas","-16.5519939286041"
-"Haina","Poroc Rose","1.9273434810471"
-"Haina","Poroc San Flower","1.83878413510768"
-"Haina","San Agustin","1.01708368931335"
-"Haina","Sitio Baybayon","-127.483934787312"
-"Haina","Sitio Lonas","0.721374097563766"
-"Haina","Sitio Tugas","-5.09870630471612"
-"Haina","Tamakin Dacot","11.9343641005458"
-"Haina","Visca","2.84973088471574"
-"Haina","Wangag","-15.8709829187507"
-"Haina","CAI","-82.1638709362792"
-"Hicgop South","Cabatoan","-40.8657463480674"
-"Hicgop South","Caridad Cemetery","-35.9831021431107"
-"Hicgop South","Caridad Proper","-36.6079515714171"
-"Hicgop South","Elementary School","161.874995444321"
-"Hicgop South","Gabas","160.984680992583"
-"Hicgop South","Haina","174.181824019566"
-"Hicgop South","Hicgop South","-180"
-"Hicgop South","Magbangon","-41.1544400981219"
-"Hicgop South","Palanas","-40.6912884071406"
-"Hicgop South","Poroc Rose","159.761621406695"
-"Hicgop South","Poroc San Flower","156.510369613042"
-"Hicgop South","San Agustin","156.028908312674"
-"Hicgop South","Sitio Baybayon","176.167504075443"
-"Hicgop South","Sitio Lonas","153.866817279878"
-"Hicgop South","Sitio Tugas","159.577128834478"
-"Hicgop South","Tamakin Dacot","172.895114351061"
-"Hicgop South","Visca","161.879203564268"
-"Hicgop South","Wangag","-39.9467676463533"
-"Hicgop South","CAI","-111.452879621408"
-"Magbangon","Cabatoan","131.75288388956"
-"Magbangon","Caridad Cemetery","133.97101569243"
-"Magbangon","Caridad Proper","136.212709470532"
-"Magbangon","Elementary School","143.694255765375"
-"Magbangon","Gabas","152.431679745725"
-"Magbangon","Haina","165.61568906726"
-"Magbangon","Hicgop South","138.838378818054"
-"Magbangon","Magbangon","-180"
-"Magbangon","Palanas","-39.4774350825361"
-"Magbangon","Poroc Rose","149.708275572539"
-"Magbangon","Poroc San Flower","147.407376257321"
-"Magbangon","San Agustin","146.741123954657"
-"Magbangon","Sitio Baybayon","167.302462553643"
-"Magbangon","Sitio Lonas","145.333175982483"
-"Magbangon","Sitio Tugas","141.398001155871"
-"Magbangon","Tamakin Dacot","164.185388420312"
-"Magbangon","Visca","151.763633480506"
-"Magbangon","Wangag","-35.8825027789793"
-"Magbangon","CAI","-120.877021791295"
-"Palanas","Cabatoan","139.699833540481"
-"Palanas","Caridad Cemetery","136.740246086986"
-"Palanas","Caridad Proper","137.821764682333"
-"Palanas","Elementary School","142.955283867448"
-"Palanas","Gabas","150.886670529944"
-"Palanas","Haina","163.43494059821"
-"Palanas","Hicgop South","139.298891180876"
-"Palanas","Magbangon","140.519925907547"
-"Palanas","Palanas","-180"
-"Palanas","Poroc Rose","148.272827755455"
-"Palanas","Poroc San Flower","146.270198515109"
-"Palanas","San Agustin","145.672839414173"
-"Palanas","Sitio Baybayon","165.010908368849"
-"Palanas","Sitio Lonas","144.473289804754"
-"Palanas","Sitio Tugas","141.176080305556"
-"Palanas","Tamakin Dacot","162.028834180313"
-"Palanas","Visca","150.132753475054"
-"Palanas","Wangag","127.89083740429"
-"Palanas","CAI","-124.646180921497"
-"Poroc Rose","Cabatoan","-29.9353824020529"
-"Poroc Rose","Caridad Cemetery","-25.1064675366876"
-"Poroc Rose","Caridad Proper","-24.3615559725165"
-"Poroc Rose","Elementary School","-20.9423908985746"
-"Poroc Rose","Gabas","163.626745447155"
-"Poroc Rose","Haina","-178.071932539181"
-"Poroc Rose","Hicgop South","-20.2343181475835"
-"Poroc Rose","Magbangon","-30.2804939143805"
-"Poroc Rose","Palanas","-31.7133062590667"
-"Poroc Rose","Poroc Rose","-180"
-"Poroc Rose","Poroc San Flower","0.658735665143941"
-"Poroc Rose","San Agustin","-6.68392270746226"
-"Poroc Rose","Sitio Baybayon","-175.390018669064"
-"Poroc Rose","Sitio Lonas","-6.56550069165364"
-"Poroc Rose","Sitio Tugas","-20.2061485368591"
-"Poroc Rose","Tamakin Dacot","-179.228961981048"
-"Poroc Rose","Visca","173.509780169362"
-"Poroc Rose","Wangag","-30.9879748518069"
-"Poroc Rose","CAI","-101.221890288402"
-"Poroc San Flower","Cabatoan","-32.2588284171385"
-"Poroc San Flower","Caridad Cemetery","-27.7332478225088"
-"Poroc San Flower","Caridad Proper","-27.1512447734224"
-"Poroc San Flower","Elementary School","-25.6469826905835"
-"Poroc San Flower","Gabas","167.522818941867"
-"Poroc San Flower","Haina","-178.160473026502"
-"Poroc San Flower","Hicgop South","-23.4855496224852"
-"Poroc San Flower","Magbangon","-32.5813700584751"
-"Poroc San Flower","Palanas","-33.7159112823071"
-"Poroc San Flower","Poroc Rose","-179.341245665649"
-"Poroc San Flower","Poroc San Flower","-180"
-"Poroc San Flower","San Agustin","-18.9342857050723"
-"Poroc San Flower","Sitio Baybayon","-175.655350264522"
-"Poroc San Flower","Sitio Lonas","-12.4506400792088"
-"Poroc San Flower","Sitio Tugas","-24.0345307427683"
-"Poroc San Flower","Tamakin Dacot","-179.237605016779"
-"Poroc San Flower","Visca","176.587507820709"
-"Poroc San Flower","Wangag","-33.0218462469133"
-"Poroc San Flower","CAI","-102.595229426439"
-"San Agustin","Cabatoan","-32.9236850697798"
-"San Agustin","Caridad Cemetery","-28.3273951684636"
-"San Agustin","Caridad Proper","-27.7609368294497"
-"San Agustin","Elementary School","-26.6841061478308"
-"San Agustin","Gabas","166.732009613917"
-"San Agustin","Haina","-178.982489081954"
-"San Agustin","Hicgop South","-23.967328303388"
-"San Agustin","Magbangon","-33.2479387672599"
-"San Agustin","Palanas","-34.3135864464934"
-"San Agustin","Poroc Rose","173.315778518004"
-"San Agustin","Poroc San Flower","161.065396721649"
-"San Agustin","San Agustin","-180"
-"San Agustin","Sitio Baybayon","-176.53938537606"
-"San Agustin","Sitio Lonas","-6.26950024707165"
-"San Agustin","Sitio Tugas","-24.6828296761555"
-"San Agustin","Tamakin Dacot","179.902620887858"
-"San Agustin","Visca","173.404019470076"
-"San Agustin","Wangag","-33.6137165684789"
-"San Agustin","CAI","-103.43691867446"
-"Sitio Baybayon","Cabatoan","-12.3533259950069"
-"Sitio Baybayon","Caridad Cemetery","-8.05416255066788"
-"Sitio Baybayon","Caridad Proper","-7.17015584520218"
-"Sitio Baybayon","Elementary School","-2.47504136164169"
-"Sitio Baybayon","Gabas","10.9608345126726"
-"Sitio Baybayon","Haina","52.5149944443821"
-"Sitio Baybayon","Hicgop South","-3.83026275716895"
-"Sitio Baybayon","Magbangon","-12.6881767623657"
-"Sitio Baybayon","Palanas","-14.9771111468228"
-"Sitio Baybayon","Poroc Rose","4.60818102920502"
-"Sitio Baybayon","Poroc San Flower","4.34283015108971"
-"Sitio Baybayon","San Agustin","3.4591103413323"
-"Sitio Baybayon","Sitio Baybayon","-180"
-"Sitio Baybayon","Sitio Lonas","3.07818370153677"
-"Sitio Baybayon","Sitio Tugas","-3.03832588550094"
-"Sitio Baybayon","Tamakin Dacot","27.0187627133647"
-"Sitio Baybayon","Visca","5.76720533604285"
-"Sitio Baybayon","Wangag","-14.2782060296302"
-"Sitio Baybayon","CAI","-81.2905784235641"
-"Sitio Lonas","Cabatoan","-34.3471217484341"
-"Sitio Lonas","Caridad Cemetery","-29.9636591848824"
-"Sitio Lonas","Caridad Proper","-29.5268119982012"
-"Sitio Lonas","Elementary School","-30.505058506644"
-"Sitio Lonas","Gabas","167.528267701314"
-"Sitio Lonas","Haina","-179.278310045944"
-"Sitio Lonas","Hicgop South","-26.1295307734067"
-"Sitio Lonas","Magbangon","-34.6559966311117"
-"Sitio Lonas","Palanas","-35.5132453862819"
-"Sitio Lonas","Poroc Rose","173.434088391511"
-"Sitio Lonas","Poroc San Flower","167.548930156348"
-"Sitio Lonas","San Agustin","173.730387615261"
-"Sitio Lonas","Sitio Baybayon","-176.92042309684"
-"Sitio Lonas","Sitio Lonas","-180"
-"Sitio Lonas","Sitio Tugas","-27.4451057808854"
-"Sitio Lonas","Tamakin Dacot","179.627757669958"
-"Sitio Lonas","Visca","173.462253716703"
-"Sitio Lonas","Wangag","-34.832462417292"
-"Sitio Lonas","CAI","-104.316053043106"
-"Sitio Tugas","Cabatoan","-38.2505442256343"
-"Sitio Tugas","Caridad Cemetery","-32.4639332406516"
-"Sitio Tugas","Caridad Proper","-32.0831992391972"
-"Sitio Tugas","Elementary School","164.437416086408"
-"Sitio Tugas","Gabas","161.125331238776"
-"Sitio Tugas","Haina","174.898521267806"
-"Sitio Tugas","Hicgop South","-20.4223272699936"
-"Sitio Tugas","Magbangon","-38.5942753117353"
-"Sitio Tugas","Palanas","-38.8135573399164"
-"Sitio Tugas","Poroc Rose","159.790334898718"
-"Sitio Tugas","Poroc San Flower","155.961932594402"
-"Sitio Tugas","San Agustin","155.31395105111"
-"Sitio Tugas","Sitio Baybayon","176.959981230204"
-"Sitio Tugas","Sitio Lonas","152.551786478208"
-"Sitio Tugas","Sitio Tugas","-180"
-"Sitio Tugas","Tamakin Dacot","173.598206808502"
-"Sitio Tugas","Visca","162.171041049232"
-"Sitio Tugas","Wangag","-38.0305957776095"
-"Sitio Tugas","CAI","-110.08788801756"
-"Tamakin Dacot","Cabatoan","-15.4747722623127"
-"Tamakin Dacot","Caridad Cemetery","-11.2311791119859"
-"Tamakin Dacot","Caridad Proper","-10.3855837140604"
-"Tamakin Dacot","Elementary School","-5.94148374908454"
-"Tamakin Dacot","Gabas","7.18575781369135"
-"Tamakin Dacot","Haina","-168.065174016184"
-"Tamakin Dacot","Hicgop South","-7.10110507259614"
-"Tamakin Dacot","Magbangon","-15.8036951405526"
-"Tamakin Dacot","Palanas","-17.9576264528517"
-"Tamakin Dacot","Poroc Rose","0.77077798834675"
-"Tamakin Dacot","Poroc San Flower","0.762116268366744"
-"Tamakin Dacot","San Agustin","-0.0973419417561925"
-"Tamakin Dacot","Sitio Baybayon","-152.979704147382"
-"Tamakin Dacot","Sitio Lonas","-0.372093611451793"
-"Tamakin Dacot","Sitio Tugas","-6.39855384654813"
-"Tamakin Dacot","Tamakin Dacot","-180"
-"Tamakin Dacot","Visca","1.66956914752478"
-"Tamakin Dacot","Wangag","-17.2699609155812"
-"Tamakin Dacot","CAI","-84.1562328968888"
-"Visca","Cabatoan","-27.8738343755134"
-"Visca","Caridad Cemetery","-23.0272226312018"
-"Visca","Caridad Proper","-22.2182642056389"
-"Visca","Elementary School","-18.1153563365386"
-"Visca","Gabas","157.284741081691"
-"Visca","Haina","-177.149304312882"
-"Visca","Hicgop South","-18.1164949652749"
-"Visca","Magbangon","-28.2248981993407"
-"Visca","Palanas","-29.853143900554"
-"Visca","Poroc Rose","-6.48997735273416"
-"Visca","Poroc San Flower","-3.41226826505345"
-"Visca","San Agustin","-6.59543928201651"
-"Visca","Sitio Baybayon","-174.23075415076"
-"Visca","Sitio Lonas","-6.5370928910224"
-"Visca","Sitio Tugas","-17.8252011665884"
-"Visca","Tamakin Dacot","-178.32992962654"
-"Visca","Visca","-180"
-"Visca","Wangag","-29.1215862553425"
-"Visca","CAI","-99.3580911532688"
-"Wangag","Cabatoan","142.678988638034"
-"Wangag","Caridad Cemetery","137.666291218834"
-"Wangag","Caridad Proper","138.727233000982"
-"Wangag","Elementary School","143.773350029366"
-"Wangag","Gabas","151.560729957888"
-"Wangag","Haina","164.116681242477"
-"Wangag","Hicgop South","140.04414689273"
-"Wangag","Magbangon","144.115593623555"
-"Wangag","Palanas","-52.1084269817157"
-"Wangag","Poroc Rose","148.998892727082"
-"Wangag","Poroc San Flower","146.964997404828"
-"Wangag","San Agustin","146.37344326652"
-"Wangag","Sitio Baybayon","165.710542824143"
-"Wangag","Sitio Lonas","145.154806913092"
-"Wangag","Sitio Tugas","141.959776636197"
-"Wangag","Tamakin Dacot","162.71722980732"
-"Wangag","Visca","150.86504434047"
-"Wangag","Wangag","-180"
-"Wangag","CAI","-123.834213182768"
-"CAI","Cabatoan","59.4417521014037"
-"CAI","Caridad Cemetery","63.9137454660728"
-"CAI","Caridad Proper","65.0615462723089"
-"CAI","Elementary School","71.0731048214667"
-"CAI","Gabas","83.368672964545"
-"CAI","Haina","97.7727488438338"
-"CAI","Hicgop South","68.4865529530332"
-"CAI","Magbangon","59.0694302584741"
-"CAI","Palanas","55.3028485340561"
-"CAI","Poroc Rose","78.7136673683374"
-"CAI","Poroc San Flower","77.3402840731957"
-"CAI","San Agustin","76.4988967228704"
-"CAI","Sitio Baybayon","98.6471273668048"
-"CAI","Sitio Lonas","75.6198581062733"
-"CAI","Sitio Tugas","69.8510252382899"
-"CAI","Tamakin Dacot","95.779889636999"
-"CAI","Visca","80.5772583496583"
-"CAI","Wangag","56.1140938940206"
-"CAI","CAI","-180"
+"site_i","site_j","bearing","direction"
+"Cabatoan","Cabatoan",-180,-1
+"Cabatoan","Caridad Cemetery",134.153516624325,134.153516624325
+"Cabatoan","Caridad Proper",136.506607956546,136.506607956546
+"Cabatoan","Elementary School",144.077342191628,144.077342191628
+"Cabatoan","Gabas",152.749797448597,152.749797448597
+"Cabatoan","Haina",165.941235246517,165.941235246517
+"Cabatoan","Hicgop South",139.127392614459,139.127392614459
+"Cabatoan","Magbangon",-48.2467959258639,311.753204074136
+"Cabatoan","Palanas",-40.2972072002161,319.702792799784
+"Cabatoan","Poroc Rose",150.05370656246,150.05370656246
+"Cabatoan","Poroc San Flower",147.730237502816,147.730237502816
+"Cabatoan","San Agustin",147.06569730581,147.06569730581
+"Cabatoan","Sitio Baybayon",167.637630940272,167.637630940272
+"Cabatoan","Sitio Lonas",145.642370589779,145.642370589779
+"Cabatoan","Sitio Tugas",141.742052213441,141.742052213441
+"Cabatoan","Tamakin Dacot",164.514629259158,164.514629259158
+"Cabatoan","Visca",152.115016634039,152.115016634039
+"Cabatoan","Wangag",-37.3187875086943,322.681212491306
+"Cabatoan","CAI",-120.504385917649,239.495614082351
+"Cabatoan","SF1",-56.5662833138212,303.433716686179
+"Cabatoan","SF2",145.21574493803,145.21574493803
+"Cabatoan","SF3",143.576189984443,143.576189984443
+"Cabatoan","SF4",148.4412534496,148.4412534496
+"Cabatoan","SF5",153.932794332925,153.932794332925
+"Cabatoan","SF6",174.338135322985,174.338135322985
+"Caridad Cemetery","Cabatoan",-45.8427388460445,314.157261153956
+"Caridad Cemetery","Caridad Cemetery",-180,-1
+"Caridad Cemetery","Caridad Proper",145.925788206176,145.925788206176
+"Caridad Cemetery","Elementary School",150.387453273624,150.387453273624
+"Caridad Cemetery","Gabas",157.012180368359,157.012180368359
+"Caridad Cemetery","Haina",170.121070089305,170.121070089305
+"Caridad Cemetery","Hicgop South",144.013780212461,144.013780212461
+"Caridad Cemetery","Magbangon",-46.0249196157901,313.97508038421
+"Caridad Cemetery","Palanas",-43.2530495724859,316.746950427514
+"Caridad Cemetery","Poroc Rose",154.886358449077,154.886358449077
+"Caridad Cemetery","Poroc San Flower",152.259556601648,152.259556601648
+"Caridad Cemetery","San Agustin",151.665726268525,151.665726268525
+"Caridad Cemetery","Sitio Baybayon",171.940509523306,171.940509523306
+"Caridad Cemetery","Sitio Lonas",150.029573037347,150.029573037347
+"Caridad Cemetery","Sitio Tugas",147.532405753125,147.532405753125
+"Caridad Cemetery","Tamakin Dacot",168.761941653628,168.761941653628
+"Caridad Cemetery","Visca",156.965363685512,156.965363685512
+"Caridad Cemetery","Wangag",-42.3277397200538,317.672260279946
+"Caridad Cemetery","CAI",-116.028723868849,243.971276131151
+"Caridad Cemetery","SF1",-49.3312917852697,310.66870821473
+"Caridad Cemetery","SF2",-62.1580983167738,297.841901683226
+"Caridad Cemetery","SF3",158.591678728756,158.591678728756
+"Caridad Cemetery","SF4",155.064873047217,155.064873047217
+"Caridad Cemetery","SF5",158.709408344959,158.709408344959
+"Caridad Cemetery","SF6",-179.788357733411,180.211642266589
+"Caridad Proper","Cabatoan",-43.4889148239369,316.511085176063
+"Caridad Proper","Caridad Cemetery",-34.0734787702811,325.926521229719
+"Caridad Proper","Caridad Proper",-180,-1
+"Caridad Proper","Elementary School",151.236405918655,151.236405918655
+"Caridad Proper","Gabas",157.695937923541,157.695937923541
+"Caridad Proper","Haina",170.963105985298,170.963105985298
+"Caridad Proper","Hicgop South",143.389663863296,143.389663863296
+"Caridad Proper","Magbangon",-43.7824931806984,316.217506819302
+"Caridad Proper","Palanas",-42.1707984423407,317.829201557659
+"Caridad Proper","Poroc Rose",155.632002207554,155.632002207554
+"Caridad Proper","Poroc San Flower",152.842292137352,152.842292137352
+"Caridad Proper","San Agustin",152.232917174843,152.232917174843
+"Caridad Proper","Sitio Baybayon",172.825243971682,172.825243971682
+"Caridad Proper","Sitio Lonas",150.467152942488,150.467152942488
+"Caridad Proper","Sitio Tugas",147.913872718048,147.913872718048
+"Caridad Proper","Tamakin Dacot",169.608265738347,169.608265738347
+"Caridad Proper","Visca",157.775053991255,157.775053991255
+"Caridad Proper","Wangag",-41.2660653129107,318.733934687089
+"Caridad Proper","CAI",-114.880210073211,245.119789926789
+"Caridad Proper","SF1",-47.1313989752877,312.868601024712
+"Caridad Proper","SF2",-51.6765971182224,308.323402881778
+"Caridad Proper","SF3",166.681363685458,166.681363685458
+"Caridad Proper","SF4",156.271981115151,156.271981115151
+"Caridad Proper","SF5",159.54253733663,159.54253733663
+"Caridad Proper","SF6",-178.46036429095,181.53963570905
+"Elementary School","Cabatoan",-35.9148809513492,324.085119048651
+"Elementary School","Caridad Cemetery",-29.6085115406954,330.391488459305
+"Elementary School","Caridad Proper",-28.7602917195455,331.239708280455
+"Elementary School","Elementary School",-180,-1
+"Elementary School","Gabas",160.801188659698,160.801188659698
+"Elementary School","Haina",175.382599762361,175.382599762361
+"Elementary School","Hicgop South",-18.1240858579954,341.875914142005
+"Elementary School","Magbangon",-36.2976474838469,323.702352516153
+"Elementary School","Palanas",-37.033981123292,322.966018876708
+"Elementary School","Poroc Rose",159.054467662235,159.054467662235
+"Elementary School","Poroc San Flower",154.349855925314,154.349855925314
+"Elementary School","San Agustin",153.313049838672,153.313049838672
+"Elementary School","Sitio Baybayon",177.5236382489,177.5236382489
+"Elementary School","Sitio Lonas",149.492209067726,149.492209067726
+"Elementary School","Sitio Tugas",-15.5622090669565,344.437790933044
+"Elementary School","Tamakin Dacot",174.0556501822,174.0556501822
+"Elementary School","Visca",161.881260889963,161.881260889963
+"Elementary School","Wangag",-36.2166495438823,323.783350456118
+"Elementary School","CAI",-108.86545556504,251.13454443496
+"Elementary School","SF1",-39.1697544634477,320.830245536552
+"Elementary School","SF2",-36.2745014331185,323.725498566881
+"Elementary School","SF3",-35.0702908409958,324.929709159004
+"Elementary School","SF4",167.569613478828,167.569613478828
+"Elementary School","SF5",163.873565598258,163.873565598258
+"Elementary School","SF6",-170.823227991119,189.176772008881
+"Gabas","Cabatoan",-27.2377699285666,332.762230071433
+"Gabas","Caridad Cemetery",-22.979120666496,337.020879333504
+"Gabas","Caridad Proper",-22.2960947839788,337.703905216021
+"Gabas","Elementary School",-19.1941424943148,340.805857505685
+"Gabas","Gabas",-180,-1
+"Gabas","Haina",-172.166500970015,187.833499029985
+"Gabas","Hicgop South",-19.0097312733529,340.990268726647
+"Gabas","Magbangon",-27.5555684504161,332.444431549584
+"Gabas","Palanas",-29.0979443230389,330.902055676961
+"Gabas","Poroc Rose",-16.3717262227435,343.628273777256
+"Gabas","Poroc San Flower",-12.4756707689297,347.52432923107
+"Gabas","San Agustin",-13.2661627108708,346.733837289129
+"Gabas","Sitio Baybayon",-169.035847518264,190.964152481736
+"Gabas","Sitio Lonas",-12.4697922434678,347.530207756532
+"Gabas","Sitio Tugas",-18.8696247638834,341.130375236117
+"Gabas","Tamakin Dacot",-172.812461391661,187.187538608339
+"Gabas","Visca",-22.7139735529679,337.286026447032
+"Gabas","Wangag",-28.424617748148,331.575382251852
+"Gabas","CAI",-96.5654431262601,263.43455687374
+"Gabas","SF1",-29.6358452473482,330.364154752652
+"Gabas","SF2",-26.24552359478,333.75447640522
+"Gabas","SF3",-23.2516658989577,336.748334101042
+"Gabas","SF4",-21.0456619872913,338.954338012709
+"Gabas","SF5",-50.7026648060519,309.297335193948
+"Gabas","SF6",-144.172031827523,215.827968172477
+"Haina","Cabatoan",-14.0486382022808,345.951361797719
+"Haina","Caridad Cemetery",-9.87252019880261,350.127479801197
+"Haina","Caridad Proper",-9.03121247634307,350.968787523657
+"Haina","Elementary School",-4.61500073361231,355.384999266388
+"Haina","Gabas",7.83125570056629,7.83125570056632
+"Haina","Haina",-180,-1
+"Haina","Hicgop South",-5.81486277745863,354.185137222541
+"Haina","Magbangon",-14.3738666235381,345.626133376462
+"Haina","Palanas",-16.5519939286041,343.448006071396
+"Haina","Poroc Rose",1.9273434810471,1.9273434810471
+"Haina","Poroc San Flower",1.83878413510768,1.83878413510769
+"Haina","San Agustin",1.01708368931335,1.01708368931332
+"Haina","Sitio Baybayon",-127.483934787312,232.516065212688
+"Haina","Sitio Lonas",0.721374097563766,0.721374097563739
+"Haina","Sitio Tugas",-5.09870630471612,354.901293695284
+"Haina","Tamakin Dacot",11.9343641005458,11.9343641005458
+"Haina","Visca",2.84973088471574,2.84973088471577
+"Haina","Wangag",-15.8709829187507,344.129017081249
+"Haina","CAI",-82.1638709362792,277.836129063721
+"Haina","SF1",-16.2699688775269,343.730031122473
+"Haina","SF2",-12.3959893258907,347.604010674109
+"Haina","SF3",-8.77832478808351,351.221675211916
+"Haina","SF4",-3.72898355704916,356.271016442951
+"Haina","SF5",4.04582527731784,4.04582527731782
+"Haina","SF6",-57.1230017791819,302.876998220818
+"Hicgop South","Cabatoan",-40.8657463480674,319.134253651933
+"Hicgop South","Caridad Cemetery",-35.9831021431107,324.016897856889
+"Hicgop South","Caridad Proper",-36.6079515714171,323.392048428583
+"Hicgop South","Elementary School",161.874995444321,161.874995444321
+"Hicgop South","Gabas",160.984680992583,160.984680992583
+"Hicgop South","Haina",174.181824019566,174.181824019566
+"Hicgop South","Hicgop South",-180,-1
+"Hicgop South","Magbangon",-41.1544400981219,318.845559901878
+"Hicgop South","Palanas",-40.6912884071406,319.308711592859
+"Hicgop South","Poroc Rose",159.761621406695,159.761621406695
+"Hicgop South","Poroc San Flower",156.510369613042,156.510369613042
+"Hicgop South","San Agustin",156.028908312674,156.028908312674
+"Hicgop South","Sitio Baybayon",176.167504075443,176.167504075443
+"Hicgop South","Sitio Lonas",153.866817279878,153.866817279878
+"Hicgop South","Sitio Tugas",159.577128834478,159.577128834478
+"Hicgop South","Tamakin Dacot",172.895114351061,172.895114351061
+"Hicgop South","Visca",161.879203564268,161.879203564268
+"Hicgop South","Wangag",-39.9467676463533,320.053232353647
+"Hicgop South","CAI",-111.452879621408,248.547120378592
+"Hicgop South","SF1",-43.8880962636657,316.111903736334
+"Hicgop South","SF2",-43.5085405295508,316.491459470449
+"Hicgop South","SF3",-57.3365986086398,302.66340139136
+"Hicgop South","SF4",164.778675342934,164.778675342934
+"Hicgop South","SF5",163.505834463139,163.505834463139
+"Hicgop South","SF6",-173.528923879002,186.471076120998
+"Magbangon","Cabatoan",131.75288388956,131.75288388956
+"Magbangon","Caridad Cemetery",133.97101569243,133.97101569243
+"Magbangon","Caridad Proper",136.212709470532,136.212709470532
+"Magbangon","Elementary School",143.694255765375,143.694255765375
+"Magbangon","Gabas",152.431679745725,152.431679745725
+"Magbangon","Haina",165.61568906726,165.61568906726
+"Magbangon","Hicgop South",138.838378818054,138.838378818054
+"Magbangon","Magbangon",-180,-1
+"Magbangon","Palanas",-39.4774350825361,320.522564917464
+"Magbangon","Poroc Rose",149.708275572539,149.708275572539
+"Magbangon","Poroc San Flower",147.407376257321,147.407376257321
+"Magbangon","San Agustin",146.741123954657,146.741123954657
+"Magbangon","Sitio Baybayon",167.302462553643,167.302462553643
+"Magbangon","Sitio Lonas",145.333175982483,145.333175982483
+"Magbangon","Sitio Tugas",141.398001155871,141.398001155871
+"Magbangon","Tamakin Dacot",164.185388420312,164.185388420312
+"Magbangon","Visca",151.763633480506,151.763633480506
+"Magbangon","Wangag",-35.8825027789793,324.117497221021
+"Magbangon","CAI",-120.877021791295,239.122978208705
+"Magbangon","SF1",-58.2597964958095,301.740203504191
+"Magbangon","SF2",143.629488284067,143.629488284067
+"Magbangon","SF3",143.000948292355,143.000948292355
+"Magbangon","SF4",148.015118954191,148.015118954191
+"Magbangon","SF5",153.58199286358,153.58199286358
+"Magbangon","SF6",173.88926381872,173.88926381872
+"Palanas","Cabatoan",139.699833540481,139.699833540481
+"Palanas","Caridad Cemetery",136.740246086986,136.740246086986
+"Palanas","Caridad Proper",137.821764682333,137.821764682333
+"Palanas","Elementary School",142.955283867448,142.955283867448
+"Palanas","Gabas",150.886670529944,150.886670529944
+"Palanas","Haina",163.43494059821,163.43494059821
+"Palanas","Hicgop South",139.298891180876,139.298891180876
+"Palanas","Magbangon",140.519925907547,140.519925907547
+"Palanas","Palanas",-180,-1
+"Palanas","Poroc Rose",148.272827755455,148.272827755455
+"Palanas","Poroc San Flower",146.270198515109,146.270198515109
+"Palanas","San Agustin",145.672839414173,145.672839414173
+"Palanas","Sitio Baybayon",165.010908368849,165.010908368849
+"Palanas","Sitio Lonas",144.473289804754,144.473289804754
+"Palanas","Sitio Tugas",141.176080305556,141.176080305556
+"Palanas","Tamakin Dacot",162.028834180313,162.028834180313
+"Palanas","Visca",150.132753475054,150.132753475054
+"Palanas","Wangag",127.89083740429,127.89083740429
+"Palanas","CAI",-124.646180921497,235.353819078503
+"Palanas","SF1",157.934992320205,157.934992320205
+"Palanas","SF2",141.96584999953,141.96584999953
+"Palanas","SF3",142.20227648151,142.20227648151
+"Palanas","SF4",146.515659627277,146.515659627277
+"Palanas","SF5",151.821090798412,151.821090798412
+"Palanas","SF6",170.668058520166,170.668058520166
+"Poroc Rose","Cabatoan",-29.9353824020529,330.064617597947
+"Poroc Rose","Caridad Cemetery",-25.1064675366876,334.893532463312
+"Poroc Rose","Caridad Proper",-24.3615559725165,335.638444027484
+"Poroc Rose","Elementary School",-20.9423908985746,339.057609101425
+"Poroc Rose","Gabas",163.626745447155,163.626745447155
+"Poroc Rose","Haina",-178.071932539181,181.928067460819
+"Poroc Rose","Hicgop South",-20.2343181475835,339.765681852416
+"Poroc Rose","Magbangon",-30.2804939143805,329.71950608562
+"Poroc Rose","Palanas",-31.7133062590667,328.286693740933
+"Poroc Rose","Poroc Rose",-180,-1
+"Poroc Rose","Poroc San Flower",0.658735665143941,0.658735665143922
+"Poroc Rose","San Agustin",-6.68392270746226,353.316077292538
+"Poroc Rose","Sitio Baybayon",-175.390018669064,184.609981330936
+"Poroc Rose","Sitio Lonas",-6.56550069165364,353.434499308346
+"Poroc Rose","Sitio Tugas",-20.2061485368591,339.793851463141
+"Poroc Rose","Tamakin Dacot",-179.228961981048,180.771038018952
+"Poroc Rose","Visca",173.509780169362,173.509780169362
+"Poroc Rose","Wangag",-30.9879748518069,329.012025148193
+"Poroc Rose","CAI",-101.221890288402,258.778109711598
+"Poroc Rose","SF1",-32.6099389926406,327.390061007359
+"Poroc Rose","SF2",-29.1145077944042,330.885492205596
+"Poroc Rose","SF3",-25.9984080449463,334.001591955054
+"Poroc Rose","SF4",-25.4496061967904,334.55039380321
+"Poroc Rose","SF5",173.542738887435,173.542738887435
+"Poroc Rose","SF6",-157.322652622595,202.677347377405
+"Poroc San Flower","Cabatoan",-32.2588284171385,327.741171582862
+"Poroc San Flower","Caridad Cemetery",-27.7332478225088,332.266752177491
+"Poroc San Flower","Caridad Proper",-27.1512447734224,332.848755226578
+"Poroc San Flower","Elementary School",-25.6469826905835,334.353017309416
+"Poroc San Flower","Gabas",167.522818941867,167.522818941867
+"Poroc San Flower","Haina",-178.160473026502,181.839526973498
+"Poroc San Flower","Hicgop South",-23.4855496224852,336.514450377515
+"Poroc San Flower","Magbangon",-32.5813700584751,327.418629941525
+"Poroc San Flower","Palanas",-33.7159112823071,326.284088717693
+"Poroc San Flower","Poroc Rose",-179.341245665649,180.658754334351
+"Poroc San Flower","Poroc San Flower",-180,-1
+"Poroc San Flower","San Agustin",-18.9342857050723,341.065714294928
+"Poroc San Flower","Sitio Baybayon",-175.655350264522,184.344649735478
+"Poroc San Flower","Sitio Lonas",-12.4506400792088,347.549359920791
+"Poroc San Flower","Sitio Tugas",-24.0345307427683,335.965469257232
+"Poroc San Flower","Tamakin Dacot",-179.237605016779,180.762394983221
+"Poroc San Flower","Visca",176.587507820709,176.587507820709
+"Poroc San Flower","Wangag",-33.0218462469133,326.978153753087
+"Poroc San Flower","CAI",-102.595229426439,257.404770573561
+"Poroc San Flower","SF1",-34.8598625842737,325.140137415726
+"Poroc San Flower","SF2",-31.7973557933322,328.202644206668
+"Poroc San Flower","SF3",-29.4346612906004,330.5653387094
+"Poroc San Flower","SF4",-34.8692607405948,325.130739259405
+"Poroc San Flower","SF5",175.462556197988,175.462556197988
+"Poroc San Flower","SF6",-159.034459078014,200.965540921986
+"San Agustin","Cabatoan",-32.9236850697798,327.07631493022
+"San Agustin","Caridad Cemetery",-28.3273951684636,331.672604831536
+"San Agustin","Caridad Proper",-27.7609368294497,332.23906317055
+"San Agustin","Elementary School",-26.6841061478308,333.315893852169
+"San Agustin","Gabas",166.732009613917,166.732009613917
+"San Agustin","Haina",-178.982489081954,181.017510918046
+"San Agustin","Hicgop South",-23.967328303388,336.032671696612
+"San Agustin","Magbangon",-33.2479387672599,326.75206123274
+"San Agustin","Palanas",-34.3135864464934,325.686413553507
+"San Agustin","Poroc Rose",173.315778518004,173.315778518004
+"San Agustin","Poroc San Flower",161.065396721649,161.065396721649
+"San Agustin","San Agustin",-180,-1
+"San Agustin","Sitio Baybayon",-176.53938537606,183.46061462394
+"San Agustin","Sitio Lonas",-6.26950024707165,353.730499752928
+"San Agustin","Sitio Tugas",-24.6828296761555,335.317170323844
+"San Agustin","Tamakin Dacot",179.902620887858,179.902620887858
+"San Agustin","Visca",173.404019470076,173.404019470076
+"San Agustin","Wangag",-33.6137165684789,326.386283431521
+"San Agustin","CAI",-103.43691867446,256.56308132554
+"San Agustin","SF1",-35.5671309406876,324.432869059312
+"San Agustin","SF2",-32.5642593858277,327.435740614172
+"San Agustin","SF3",-30.3473176710866,329.652682328913
+"San Agustin","SF4",-39.35149733107,320.64850266893
+"San Agustin","SF5",173.458819539704,173.458819539704
+"San Agustin","SF6",-160.735482577612,199.264517422388
+"Sitio Baybayon","Cabatoan",-12.3533259950069,347.646674004993
+"Sitio Baybayon","Caridad Cemetery",-8.05416255066788,351.945837449332
+"Sitio Baybayon","Caridad Proper",-7.17015584520218,352.829844154798
+"Sitio Baybayon","Elementary School",-2.47504136164169,357.524958638358
+"Sitio Baybayon","Gabas",10.9608345126726,10.9608345126726
+"Sitio Baybayon","Haina",52.5149944443821,52.5149944443821
+"Sitio Baybayon","Hicgop South",-3.83026275716895,356.169737242831
+"Sitio Baybayon","Magbangon",-12.6881767623657,347.311823237634
+"Sitio Baybayon","Palanas",-14.9771111468228,345.022888853177
+"Sitio Baybayon","Poroc Rose",4.60818102920502,4.60818102920501
+"Sitio Baybayon","Poroc San Flower",4.34283015108971,4.34283015108969
+"Sitio Baybayon","San Agustin",3.4591103413323,3.45911034133229
+"Sitio Baybayon","Sitio Baybayon",-180,-1
+"Sitio Baybayon","Sitio Lonas",3.07818370153677,3.07818370153677
+"Sitio Baybayon","Sitio Tugas",-3.03832588550094,356.961674114499
+"Sitio Baybayon","Tamakin Dacot",27.0187627133647,27.0187627133647
+"Sitio Baybayon","Visca",5.76720533604285,5.76720533604288
+"Sitio Baybayon","Wangag",-14.2782060296302,345.72179397037
+"Sitio Baybayon","CAI",-81.2905784235641,278.709421576436
+"Sitio Baybayon","SF1",-14.6188455591093,345.381154440891
+"Sitio Baybayon","SF2",-10.5991125130091,349.400887486991
+"Sitio Baybayon","SF3",-6.81466245157498,353.185337548425
+"Sitio Baybayon","SF4",-1.38020081564799,358.619799184352
+"Sitio Baybayon","SF5",7.254493547554,7.25449354755398
+"Sitio Baybayon","SF6",-47.1810543925943,312.818945607406
+"Sitio Lonas","Cabatoan",-34.3471217484341,325.652878251566
+"Sitio Lonas","Caridad Cemetery",-29.9636591848824,330.036340815118
+"Sitio Lonas","Caridad Proper",-29.5268119982012,330.473188001799
+"Sitio Lonas","Elementary School",-30.505058506644,329.494941493356
+"Sitio Lonas","Gabas",167.528267701314,167.528267701314
+"Sitio Lonas","Haina",-179.278310045944,180.721689954056
+"Sitio Lonas","Hicgop South",-26.1295307734067,333.870469226593
+"Sitio Lonas","Magbangon",-34.6559966311117,325.344003368888
+"Sitio Lonas","Palanas",-35.5132453862819,324.486754613718
+"Sitio Lonas","Poroc Rose",173.434088391511,173.434088391511
+"Sitio Lonas","Poroc San Flower",167.548930156348,167.548930156348
+"Sitio Lonas","San Agustin",173.730387615261,173.730387615261
+"Sitio Lonas","Sitio Baybayon",-176.92042309684,183.07957690316
+"Sitio Lonas","Sitio Lonas",-180,-1
+"Sitio Lonas","Sitio Tugas",-27.4451057808854,332.554894219115
+"Sitio Lonas","Tamakin Dacot",179.627757669958,179.627757669958
+"Sitio Lonas","Visca",173.462253716703,173.462253716703
+"Sitio Lonas","Wangag",-34.832462417292,325.167537582708
+"Sitio Lonas","CAI",-104.316053043106,255.683946956894
+"Sitio Lonas","SF1",-36.9458051644203,323.05419483558
+"Sitio Lonas","SF2",-34.2592936804615,325.740706319539
+"Sitio Lonas","SF3",-32.6834039527438,327.316596047256
+"Sitio Lonas","SF4",-51.6094210559443,308.390578944056
+"Sitio Lonas","SF5",173.493618502041,173.493618502041
+"Sitio Lonas","SF6",-161.883497573778,198.116502426222
+"Sitio Tugas","Cabatoan",-38.2505442256343,321.749455774366
+"Sitio Tugas","Caridad Cemetery",-32.4639332406516,327.536066759348
+"Sitio Tugas","Caridad Proper",-32.0831992391972,327.916800760803
+"Sitio Tugas","Elementary School",164.437416086408,164.437416086408
+"Sitio Tugas","Gabas",161.125331238776,161.125331238776
+"Sitio Tugas","Haina",174.898521267806,174.898521267806
+"Sitio Tugas","Hicgop South",-20.4223272699936,339.577672730006
+"Sitio Tugas","Magbangon",-38.5942753117353,321.405724688265
+"Sitio Tugas","Palanas",-38.8135573399164,321.186442660084
+"Sitio Tugas","Poroc Rose",159.790334898718,159.790334898718
+"Sitio Tugas","Poroc San Flower",155.961932594402,155.961932594402
+"Sitio Tugas","San Agustin",155.31395105111,155.31395105111
+"Sitio Tugas","Sitio Baybayon",176.959981230204,176.959981230204
+"Sitio Tugas","Sitio Lonas",152.551786478208,152.551786478208
+"Sitio Tugas","Sitio Tugas",-180,-1
+"Sitio Tugas","Tamakin Dacot",173.598206808502,173.598206808502
+"Sitio Tugas","Visca",162.171041049232,162.171041049232
+"Sitio Tugas","Wangag",-38.0305957776095,321.96940422239
+"Sitio Tugas","CAI",-110.08788801756,249.91211198244
+"Sitio Tugas","SF1",-41.4074164360228,318.592583563977
+"Sitio Tugas","SF2",-39.5092786262814,320.490721373719
+"Sitio Tugas","SF3",-42.4377809924253,317.562219007575
+"Sitio Tugas","SF4",166.5903422256,166.5903422256
+"Sitio Tugas","SF5",163.927480093836,163.927480093836
+"Sitio Tugas","SF6",-172.050230666101,187.949769333899
+"Tamakin Dacot","Cabatoan",-15.4747722623127,344.525227737687
+"Tamakin Dacot","Caridad Cemetery",-11.2311791119859,348.768820888014
+"Tamakin Dacot","Caridad Proper",-10.3855837140604,349.61441628594
+"Tamakin Dacot","Elementary School",-5.94148374908454,354.058516250915
+"Tamakin Dacot","Gabas",7.18575781369135,7.18575781369134
+"Tamakin Dacot","Haina",-168.065174016184,191.934825983816
+"Tamakin Dacot","Hicgop South",-7.10110507259614,352.898894927404
+"Tamakin Dacot","Magbangon",-15.8036951405526,344.196304859447
+"Tamakin Dacot","Palanas",-17.9576264528517,342.042373547148
+"Tamakin Dacot","Poroc Rose",0.77077798834675,0.770777988346765
+"Tamakin Dacot","Poroc San Flower",0.762116268366744,0.762116268366754
+"Tamakin Dacot","San Agustin",-0.0973419417561925,359.902658058244
+"Tamakin Dacot","Sitio Baybayon",-152.979704147382,207.020295852618
+"Tamakin Dacot","Sitio Lonas",-0.372093611451793,359.627906388548
+"Tamakin Dacot","Sitio Tugas",-6.39855384654813,353.601446153452
+"Tamakin Dacot","Tamakin Dacot",-180,-1
+"Tamakin Dacot","Visca",1.66956914752478,1.66956914752478
+"Tamakin Dacot","Wangag",-17.2699609155812,342.730039084419
+"Tamakin Dacot","CAI",-84.1562328968888,275.843767103111
+"Tamakin Dacot","SF1",-17.7375933473798,342.26240665262
+"Tamakin Dacot","SF2",-13.8455032550714,346.154496744929
+"Tamakin Dacot","SF3",-10.2013207424487,349.798679257551
+"Tamakin Dacot","SF4",-5.14075402625171,354.859245973748
+"Tamakin Dacot","SF5",2.86922143943508,2.86922143943508
+"Tamakin Dacot","SF6",-73.9183864175851,286.081613582415
+"Visca","Cabatoan",-27.8738343755134,332.126165624487
+"Visca","Caridad Cemetery",-23.0272226312018,336.972777368798
+"Visca","Caridad Proper",-22.2182642056389,337.781735794361
+"Visca","Elementary School",-18.1153563365386,341.884643663461
+"Visca","Gabas",157.284741081691,157.284741081691
+"Visca","Haina",-177.149304312882,182.850695687118
+"Visca","Hicgop South",-18.1164949652749,341.883505034725
+"Visca","Magbangon",-28.2248981993407,331.775101800659
+"Visca","Palanas",-29.853143900554,330.146856099446
+"Visca","Poroc Rose",-6.48997735273416,353.510022647266
+"Visca","Poroc San Flower",-3.41226826505345,356.587731734947
+"Visca","San Agustin",-6.59543928201651,353.404560717983
+"Visca","Sitio Baybayon",-174.23075415076,185.76924584924
+"Visca","Sitio Lonas",-6.5370928910224,353.462907108978
+"Visca","Sitio Tugas",-17.8252011665884,342.174798833412
+"Visca","Tamakin Dacot",-178.32992962654,181.67007037346
+"Visca","Visca",-180,-1
+"Visca","Wangag",-29.1215862553425,330.878413744658
+"Visca","CAI",-99.3580911532688,260.641908846731
+"Visca","SF1",-30.5240539621582,329.475946037842
+"Visca","SF2",-26.8179690910804,333.18203090892
+"Visca","SF3",-23.3677621182178,336.632237881782
+"Visca","SF4",-20.3359455851865,339.664054414814
+"Visca","SF5",173.57453796346,173.57453796346
+"Visca","SF6",-153.797731751068,206.202268248932
+"Wangag","Cabatoan",142.678988638034,142.678988638034
+"Wangag","Caridad Cemetery",137.666291218834,137.666291218834
+"Wangag","Caridad Proper",138.727233000982,138.727233000982
+"Wangag","Elementary School",143.773350029366,143.773350029366
+"Wangag","Gabas",151.560729957888,151.560729957888
+"Wangag","Haina",164.116681242477,164.116681242477
+"Wangag","Hicgop South",140.04414689273,140.04414689273
+"Wangag","Magbangon",144.115593623555,144.115593623555
+"Wangag","Palanas",-52.1084269817157,307.891573018284
+"Wangag","Poroc Rose",148.998892727082,148.998892727082
+"Wangag","Poroc San Flower",146.964997404828,146.964997404828
+"Wangag","San Agustin",146.37344326652,146.37344326652
+"Wangag","Sitio Baybayon",165.710542824143,165.710542824143
+"Wangag","Sitio Lonas",145.154806913092,145.154806913092
+"Wangag","Sitio Tugas",141.959776636197,141.959776636197
+"Wangag","Tamakin Dacot",162.71722980732,162.71722980732
+"Wangag","Visca",150.86504434047,150.86504434047
+"Wangag","Wangag",-180,-1
+"Wangag","CAI",-123.834213182768,236.165786817232
+"Wangag","SF1",175.690088165364,175.690088165364
+"Wangag","SF2",143.858600263682,143.858600263682
+"Wangag","SF3",143.300776377597,143.300776377597
+"Wangag","SF4",147.375580846314,147.375580846314
+"Wangag","SF5",152.550304641099,152.550304641099
+"Wangag","SF6",171.575435413223,171.575435413223
+"CAI","Cabatoan",59.4417521014037,59.4417521014037
+"CAI","Caridad Cemetery",63.9137454660728,63.9137454660728
+"CAI","Caridad Proper",65.0615462723089,65.0615462723089
+"CAI","Elementary School",71.0731048214667,71.0731048214667
+"CAI","Gabas",83.368672964545,83.368672964545
+"CAI","Haina",97.7727488438338,97.7727488438338
+"CAI","Hicgop South",68.4865529530332,68.4865529530332
+"CAI","Magbangon",59.0694302584741,59.0694302584741
+"CAI","Palanas",55.3028485340561,55.3028485340561
+"CAI","Poroc Rose",78.7136673683374,78.7136673683374
+"CAI","Poroc San Flower",77.3402840731957,77.3402840731957
+"CAI","San Agustin",76.4988967228704,76.4988967228704
+"CAI","Sitio Baybayon",98.6471273668048,98.6471273668048
+"CAI","Sitio Lonas",75.6198581062733,75.6198581062733
+"CAI","Sitio Tugas",69.8510252382899,69.8510252382899
+"CAI","Tamakin Dacot",95.779889636999,95.779889636999
+"CAI","Visca",80.5772583496583,80.5772583496583
+"CAI","Wangag",56.1140938940206,56.1140938940206
+"CAI","CAI",-180,-1
+"CAI","SF1",57.343632109137,57.343632109137
+"CAI","SF2",62.3212559763929,62.3212559763929
+"CAI","SF3",66.841824084343,66.841824084343
+"CAI","SF4",73.7638056058845,73.7638056058845
+"CAI","SF5",82.5300564078265,82.5300564078265
+"CAI","SF6",94.4895034079053,94.4895034079053
+"SF1","Cabatoan",123.431608514529,123.431608514529
+"SF1","Caridad Cemetery",130.662856099546,130.662856099546
+"SF1","Caridad Proper",132.862016522124,132.862016522124
+"SF1","Elementary School",140.820363334491,140.820363334491
+"SF1","Gabas",150.349622027508,150.349622027508
+"SF1","Haina",163.717813569477,163.717813569477
+"SF1","Hicgop South",136.102936241365,136.102936241365
+"SF1","Magbangon",121.738415479661,121.738415479661
+"SF1","Palanas",-22.0641573646302,337.93584263537
+"SF1","Poroc Rose",147.377047736568,147.377047736568
+"SF1","Poroc San Flower",145.127100269447,145.127100269447
+"SF1","San Agustin",144.420148005262,144.420148005262
+"SF1","Sitio Baybayon",165.370021159677,165.370021159677
+"SF1","Sitio Lonas",143.041583263912,143.041583263912
+"SF1","Sitio Tugas",138.583074102383,138.583074102383
+"SF1","Tamakin Dacot",162.249715893735,162.249715893735
+"SF1","Visca",149.462695814243,149.462695814243
+"SF1","Wangag",-4.30979688184924,355.690203118151
+"SF1","CAI",-122.604579927927,237.395420072073
+"SF1","SF1",-180,-1
+"SF1","SF2",135.606727576664,135.606727576664
+"SF1","SF3",138.93361066821,138.93361066821
+"SF1","SF4",145.129339707666,145.129339707666
+"SF1","SF5",151.334302912172,151.334302912172
+"SF1","SF6",171.412048665335,171.412048665335
+"SF2","Cabatoan",-34.7824356961054,325.217564303895
+"SF2","Caridad Cemetery",117.839977283496,117.839977283496
+"SF2","Caridad Proper",128.320745779841,128.320745779841
+"SF2","Elementary School",143.719541277021,143.719541277021
+"SF2","Gabas",153.743860417513,153.743860417513
+"SF2","Haina",167.595692124443,167.595692124443
+"SF2","Hicgop South",136.486418648225,136.486418648225
+"SF2","Magbangon",-36.3683722416513,323.631627758349
+"SF2","Palanas",-38.0293717100741,321.970628289926
+"SF2","Poroc Rose",150.876399123926,150.876399123926
+"SF2","Poroc San Flower",148.193528804554,148.193528804554
+"SF2","San Agustin",147.426941873028,147.426941873028
+"SF2","Sitio Baybayon",169.393651374937,169.393651374937
+"SF2","Sitio Lonas",145.732017917521,145.732017917521
+"SF2","Sitio Tugas",140.485137732211,140.485137732211
+"SF2","Tamakin Dacot",166.145707532036,166.145707532036
+"SF2","Visca",153.172699089688,153.172699089688
+"SF2","Wangag",-36.1373566407383,323.862643359262
+"SF2","CAI",-117.623110589047,242.376889410953
+"SF2","SF1",-44.3893456001132,315.610654399887
+"SF2","SF2",-180,-1
+"SF2","SF3",142.56279319625,142.56279319625
+"SF2","SF4",149.235344998917,149.235344998917
+"SF2","SF5",155.14278863,155.14278863
+"SF2","SF6",176.956165052156,176.956165052156
+"SF3","Cabatoan",-36.4188650919729,323.581134908027
+"SF3","Caridad Cemetery",-21.4071191730793,338.592880826921
+"SF3","Caridad Proper",-13.3181670131992,346.681832986801
+"SF3","Elementary School",144.926876993895,144.926876993895
+"SF3","Gabas",156.740837721741,156.740837721741
+"SF3","Haina",171.216461641569,171.216461641569
+"SF3","Hicgop South",122.661486901392,122.661486901392
+"SF3","Magbangon",-36.9937867746997,323.0062132253
+"SF3","Palanas",-37.7898199509652,322.210180049035
+"SF3","Poroc Rose",153.995620905483,153.995620905483
+"SF3","Poroc San Flower",150.559346583584,150.559346583584
+"SF3","San Agustin",149.647007249432,149.647007249432
+"SF3","Sitio Baybayon",173.181204720033,173.181204720033
+"SF3","Sitio Lonas",147.3110319661,147.3110319661
+"SF3","Sitio Tugas",137.559761134646,137.559761134646
+"SF3","Tamakin Dacot",169.792997152187,169.792997152187
+"SF3","Visca",156.626026723436,156.626026723436
+"SF3","Wangag",-36.6920549596338,323.307945040366
+"SF3","CAI",-113.099493943098,246.900506056902
+"SF3","SF1",-41.0593379693839,318.940662030616
+"SF3","SF2",-37.4340814279775,322.565918572022
+"SF3","SF3",-180,-1
+"SF3","SF4",153.590954885126,153.590954885126
+"SF3","SF5",158.732274152967,158.732274152967
+"SF3","SF6",-177.456451444618,182.543548555382
+"SF4","Cabatoan",-31.5503130121368,328.449686987863
+"SF4","Caridad Cemetery",-24.9304329645371,335.069567035463
+"SF4","Caridad Proper",-23.7240573639019,336.275942636098
+"SF4","Elementary School",-12.4297259333511,347.570274066649
+"SF4","Gabas",158.950330999577,158.950330999577
+"SF4","Haina",176.269274498863,176.269274498863
+"SF4","Hicgop South",-15.2197455886521,344.780254411348
+"SF4","Magbangon",-31.9761277989758,328.023872201024
+"SF4","Palanas",-33.472950257745,326.527049742255
+"SF4","Poroc Rose",154.54791391871,154.54791391871
+"SF4","Poroc San Flower",145.128239703615,145.128239703615
+"SF4","San Agustin",140.646320401254,140.646320401254
+"SF4","Sitio Baybayon",178.619135434471,178.619135434471
+"SF4","Sitio Lonas",128.388508346132,128.388508346132
+"SF4","Sitio Tugas",-13.4086223965224,346.591377603478
+"SF4","Tamakin Dacot",174.857038158124,174.857038158124
+"SF4","Visca",159.661333030711,159.661333030711
+"SF4","Wangag",-32.6137631830764,327.386236816924
+"SF4","CAI",-106.174142294787,253.825857705213
+"SF4","SF1",-34.8601227057968,325.139877294203
+"SF4","SF2",-30.7580401351277,329.241959864872
+"SF4","SF3",-26.4055537673473,333.594446232653
+"SF4","SF4",-180,-1
+"SF4","SF5",162.746113294668,162.746113294668
+"SF4","SF6",-168.028559401029,191.971440598971
+"SF5","Cabatoan",-26.0558109546948,333.944189045305
+"SF5","Caridad Cemetery",-21.2829304571114,338.717069542889
+"SF5","Caridad Proper",-20.4505330168298,339.54946698317
+"SF5","Elementary School",-16.1228023697655,343.877197630234
+"SF5","Gabas",129.296300798488,129.296300798488
+"SF5","Haina",-175.952961177842,184.047038822158
+"SF5","Hicgop South",-16.4896151330222,343.510384866978
+"SF5","Magbangon",-26.4062932489875,333.593706751013
+"SF5","Palanas",-28.1645622320988,331.835437767901
+"SF5","Poroc Rose",-6.4567681765548,353.543231823445
+"SF5","Poroc San Flower",-4.53696932042692,355.463030679573
+"SF5","San Agustin",-6.54038876059196,353.459611239408
+"SF5","Sitio Baybayon",-172.743217834697,187.256782165303
+"SF5","Sitio Lonas",-6.50547765235889,353.494522347641
+"SF5","Sitio Tugas",-16.0685129839888,343.931487016011
+"SF5","Tamakin Dacot",-177.130028204248,182.869971795752
+"SF5","Visca",-6.42521157711535,353.574788422885
+"SF5","Wangag",-27.4360812497648,332.563918750235
+"SF5","CAI",-97.4050784828286,262.594921517171
+"SF5","SF1",-28.6522021899641,331.347797810036
+"SF5","SF2",-24.847633009751,335.152366990249
+"SF5","SF3",-21.2612667128386,338.738733287161
+"SF5","SF4",-17.2509158882407,342.749084111759
+"SF5","SF5",-180,-1
+"SF5","SF6",-149.229128087395,210.770871912605
+"SF6","Cabatoan",-5.65827026011903,354.341729739881
+"SF6","Caridad Cemetery",0.211521764606121,0.211521764606118
+"SF6","Caridad Proper",1.53878799795536,1.53878799795535
+"SF6","Elementary School",9.17264841161236,9.17264841161239
+"SF6","Gabas",35.8192182788462,35.8192182788462
+"SF6","Haina",122.870520129374,122.870520129374
+"SF6","Hicgop South",6.46786271536954,6.46786271536956
+"SF6","Magbangon",-6.10682413090672,353.893175869093
+"SF6","Palanas",-9.32541062796831,350.674589372032
+"SF6","Poroc Rose",22.6701101136,22.6701101136
+"SF6","Poroc San Flower",20.9582821956126,20.9582821956126
+"SF6","San Agustin",19.2575731595244,19.2575731595244
+"SF6","Sitio Baybayon",132.813540721274,132.813540721274
+"SF6","Sitio Lonas",18.1096680278678,18.1096680278678
+"SF6","Sitio Tugas",7.94601691018985,7.94601691018983
+"SF6","Tamakin Dacot",106.074669610825,106.074669610825
+"SF6","Visca",26.1947933089856,26.1947933089856
+"SF6","Wangag",-8.41876321615545,351.581236783845
+"SF6","CAI",-85.4535426681485,274.546457331852
+"SF6","SF1",-8.58226596288845,351.417734037112
+"SF6","SF2",-3.04204625316171,356.957953746838
+"SF6","SF3",2.542235532872,2.54223553287198
+"SF6","SF4",11.9666635209953,11.9666635209953
+"SF6","SF5",30.763151519548,30.763151519548
+"SF6","SF6",-180,-1
