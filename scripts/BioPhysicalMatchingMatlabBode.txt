@@ -1,0 +1,397 @@
+function Comparison_3_direct_fitting()
+
+ 
+
+NR = 5000;
+
+DA = 0;
+
+figure(1), clf, hold on, box on
+
+sub_fitting(4,NR,DA)
+
+sub_fitting(1,NR,DA)
+
+sub_fitting(2,NR,DA)
+
+sub_fitting(3,NR,DA)
+
+ 
+
+return
+
+set(gcf, 'paperunits', 'centimeters', 'paperposition', [0 0 25 12]*1.1)
+
+set(gcf, 'renderer', 'painters')
+
+print('-dtiff','-r200',['../Figures/Likelihood_comparison.tiff'])
+
+ 
+
+function sub_fitting(DISP_MODEL,NumReps,DO_ANALYSES)
+
+ 
+
+% NOTES
+
+% - if this is not the reef-scale analysis, watch out for "609" values
+
+ 
+
+AdPU = 1; % Adult population uncertainty (1 = include; 2 = don't include)
+
+AreaDef = 2; % Definition of reef area (1 = area, 2 = perimeter)
+
+ 
+
+if DO_ANALYSES == 1
+
+   
+
+   % This is a P. maculatus model
+
+   load Data/crcb_domain_southern_gbr *_mac Num_reefs
+
+   Prop_sampled = Prop_sampled_mac;
+
+   MN_pop = MN_pop_mac;
+
+   SE_pop = SE_pop_mac;
+
+   Num_adults_sampled = Num_sampled_mac;
+
+   
+
+   % Extract the observed data
+
+   load Data/Observed_Matrices Obs_*
+
+   J_SampledReefs_Cohort_1 = find(sum(Obs_matrix_Cohort_1) > 0);
+
+   J_SampledReefs_Cohort_2 = find(sum(Obs_matrix_Cohort_2) > 0);
+
+   
+
+   
+
+   % Extract the null expectation from Little & Mapstone
+
+   Create_null_expectations(AreaDef)
+
+   load Data/NullDispersalModels
+
+   
+
+   % Turn the modelled data into probability vectors
+
+   if DISP_MODEL == 4
+
+      load Data/Simulated_matrices_extra_m018
+
+   else
+
+      load Data/Simulated_matrices
+
+   end
+
+   
+
+   Weight_by_spawning = 1; % Is spawning uniform across time, or weighted by month according to observations? (1 = yes; 0 = no)
+
+   if DISP_MODEL == 1; ylb = 'Random';
+
+      if Weight_by_spawning == 0; Sim_matrix_Cohort_1 = Sim_matrix_Cohort_1_r; Sim_matrix_Cohort_2 = Sim_matrix_Cohort_2_r;
+
+      else; Sim_matrix_Cohort_1 = Weighted_Sim_matrix_Cohort_1_r; Sim_matrix_Cohort_2 = Weighted_Sim_matrix_Cohort_2_r;
+
+      end
+
+   elseif DISP_MODEL == 2; ylb = 'Passive';
+
+      if Weight_by_spawning == 0; Sim_matrix_Cohort_1 = Sim_matrix_Cohort_1_n; Sim_matrix_Cohort_2 = Sim_matrix_Cohort_2_n;
+
+      else; Sim_matrix_Cohort_1 = Weighted_Sim_matrix_Cohort_1_n; Sim_matrix_Cohort_2 = Weighted_Sim_matrix_Cohort_2_n;
+
+      end
+
+   elseif DISP_MODEL == 3; ylb = 'South-east';
+
+      if Weight_by_spawning == 0; Sim_matrix_Cohort_1 = Sim_matrix_Cohort_1_se;; Sim_matrix_Cohort_2 = Sim_matrix_Cohort_2_se;
+
+      else; Sim_matrix_Cohort_1 = Weighted_Sim_matrix_Cohort_1_se; Sim_matrix_Cohort_2 = Weighted_Sim_matrix_Cohort_2_se;
+
+      end
+
+   elseif DISP_MODEL == 4; ylb = 'Preferred';
+
+      if Weight_by_spawning == 0; Sim_matrix_Cohort_1 = Sim_matrix_Cohort_1_pp; Sim_matrix_Cohort_2 = Sim_matrix_Cohort_2_pp;
+
+      else; Sim_matrix_Cohort_1 = Weighted_Sim_matrix_Cohort_1_pp; Sim_matrix_Cohort_2 = Weighted_Sim_matrix_Cohort_2_pp;
+
+      end
+
+   end
+
+   
+
+   % Calculate the relative output of the different reefs (based on reef area, and cross-shelf location (P. mac and P. leo have different distributions))
+
+   RelativeOutput = Calculate_Relative_Output(AreaDef);
+
+   Area_weighted_Sim_matrix_Cohort_1 = repmat(RelativeOutput,1,609).*Sim_matrix_Cohort_1;
+
+   Area_weighted_Sim_matrix_Cohort_2 = repmat(RelativeOutput,1,609).*Sim_matrix_Cohort_2;
+
+   
+
+   % Estimate the likeihood of the cohorts separately, and then join them
+
+   for reps = 1:500
+
+      [Prop_sampled,RemoveVec] = sub_propvec(MN_pop,SE_pop,Num_adults_sampled,AdPU);
+
+      
+
+      % Fit the data with the biophysical model predictions
+
+      LL_BP(reps) = sub_likelihood(Obs_matrix_Cohort_1,Area_weighted_Sim_matrix_Cohort_1,Prop_sampled,J_SampledReefs_Cohort_1,RemoveVec,0) + ...
+
+                    sub_likelihood(Obs_matrix_Cohort_2,Area_weighted_Sim_matrix_Cohort_2,Prop_sampled,J_SampledReefs_Cohort_2,RemoveVec,0);
+
+      
+
+      if DISP_MODEL == 4
+
+         % Fit a series of null models to the data
+
+         for n = 1:NumNulls
+
+            ThisNull = squeeze(NullConnMat_ALL(:,:,n));
+
+            
+
+            LL_Null(n,reps) = sub_likelihood(Obs_matrix_Cohort_1,ThisNull,Prop_sampled,J_SampledReefs_Cohort_1,RemoveVec,0) + ...
+
+               sub_likelihood(Obs_matrix_Cohort_2,ThisNull,Prop_sampled,J_SampledReefs_Cohort_2,RemoveVec,0);
+
+         end
+
+      end
+
+   end
+
+   
+
+   if DISP_MODEL == 4
+
+      % Calculate expected LL for this amount of sampling using a parametric bootstrap method and the biophysical matrix itself
+
+      for k = 1:NumReps
+
+         
+
+         % How many adults were sampled at each reef? Keep this constant across the two cohorts
+
+         [Prop_sampled,RemoveVec] = sub_propvec(MN_pop,SE_pop,Num_adults_sampled,AdPU);
+
+         
+
+         % Simulate a sample for each cohort using the biophysical models
+
+         Sample_from_BP_cohort_1 = SimulateMatchingCohort(Obs_matrix_Cohort_1,Area_weighted_Sim_matrix_Cohort_1,RemoveVec);
+
+         Sample_from_BP_cohort_2 = SimulateMatchingCohort(Obs_matrix_Cohort_2,Area_weighted_Sim_matrix_Cohort_2,RemoveVec);
+
+         
+
+         % The fitting process doesn't really know what the proportion sampled was
+
+         [Prop_sampled,RemoveVec] = sub_propvec(MN_pop,SE_pop,Num_adults_sampled,AdPU);
+
+         
+
+         % Calculate the parametric BP model likelihood
+
+         LL_npbs(k) = sub_likelihood(Sample_from_BP_cohort_1,Area_weighted_Sim_matrix_Cohort_1,Prop_sampled,J_SampledReefs_Cohort_1,RemoveVec,0) + ...
+
+                      sub_likelihood(Sample_from_BP_cohort_2,Area_weighted_Sim_matrix_Cohort_2,Prop_sampled,J_SampledReefs_Cohort_2,RemoveVec,0);
+
+         
+
+      end
+
+   end
+
+   eval(['save Data/TEMP_' num2str(DISP_MODEL)])
+
+end
+
+clearvars -except DISP_MODEL
+
+eval(['load Data/TEMP_' num2str(DISP_MODEL)])
+
+ 
+
+FS = 14;
+
+LW = 1.2;
+
+d = 0.015;
+
+ 
+
+if DISP_MODEL == 4
+
+   % In the first figure, plot the parametric bootstrap expectation of LL, and compare it to the LL of the observed data
+
+   edges = linspace(-1000,0,40);
+
+   
+
+   H_mod = histc(LL_npbs,edges);
+
+   quantile(LL_npbs,[0.05 0.975])
+
+   H_mod = H_mod./max(H_mod); pdf = H_mod/sum(H_mod); CS = cumsum(pdf);
+
+   H_mod(H_mod < 1e-2) = 0;
+
+   H_mod = H_mod.*1e6;
+
+   BB = bar(edges,H_mod,1); set(BB,'facecolor',0.75.*ones(1,3),'edgecolor','none')
+
+   FLB = min(find(CS > 0.025)); H_mod_LB = H_mod; H_mod_LB(FLB:end) = 0;
+
+   BB = bar(edges,H_mod_LB,1); set(BB,'facecolor',[1 0.75 0.75],'edgecolor','none')
+
+   FUB = max(find(CS < 0.975)); H_mod_UB = H_mod; H_mod_UB(1:FUB) = 0;
+
+   BB = bar(edges,H_mod_UB,1); set(BB,'facecolor',[1 0.75 0.75],'edgecolor','none')
+
+   
+
+   Y = 0.15;
+
+   mean(LL_BP)
+
+   Q_BP = quantile(LL_BP,[0.025 0.975]);
+
+   plot([Q_BP(1) Q_BP(1) nan Q_BP(1) Q_BP(2) nan Q_BP(2) Q_BP(2)],Y+[d -d 0 0 0 0 -d d],'-','linewidth',3,'color',[0 0 0.7])
+
+   text(Q_BP(2)+10,Y,'Biophysical','fontsize',FS)
+
+   
+
+   for n = 1:NumNulls
+
+      Q_Null = quantile(LL_Null(n,:),[0.025 0.975]);
+
+      YY = 0.55+(n-1)*0.1;
+
+      plot([Q_Null(1) Q_Null(1) nan Q_Null(1) Q_Null(2) nan Q_Null(2) Q_Null(2)],YY+[d -d 0 0 0 0 -d d],'-','linewidth',3,'color','k')
+
+      text(Q_Null(2)+10,YY,NullNames{n},'fontsize',FS)
+
+   end
+
+   
+
+   % Superimpose passive models as null
+
+elseif DISP_MODEL == 2
+
+   Y = 0.35;
+
+   Q_BP = quantile(LL_BP,[0.025 0.975]);
+
+   plot([Q_BP(1) Q_BP(1) nan Q_BP(1) Q_BP(2) nan Q_BP(2) Q_BP(2)],Y+[d -d 0 0 0 0 -d d],'-','linewidth',3,'color',[0.7 0 0])
+
+   text(Q_BP(1)-90,Y,'Passive','fontsize',FS)
+
+   ylim([0 1.05])
+
+elseif DISP_MODEL == 1
+
+   Y = 0.45;
+
+   Q_BP = quantile(LL_BP,[0.025 0.975]);
+
+   plot([Q_BP(1) Q_BP(1) nan Q_BP(1) Q_BP(2) nan Q_BP(2) Q_BP(2)],Y+[d -d 0 0 0 0 -d d],'-','linewidth',3,'color',[0.7 0 0.7])
+
+   text(Q_BP(2)+10,Y,'Random','fontsize',FS)
+
+   ylim([0 1.05])
+
+elseif DISP_MODEL == 3
+
+   Y = 0.25;
+
+   Q_BP = quantile(LL_BP,[0.025 0.975]);
+
+   plot([Q_BP(1) Q_BP(1) nan Q_BP(1) Q_BP(2) nan Q_BP(2) Q_BP(2)],Y+[d -d 0 0 0 0 -d d],'-','linewidth',3,'color',[0 0.7 0])
+
+   text(Q_BP(2)+10,Y,'SE','fontsize',FS)
+
+   ylim([0 1.05])
+
+end
+
+xlabel('Log likelihood','fontsize',FS)
+
+set(gca,'ytick',[])
+
+xlim([-1050 -50])
+
+ 
+
+ 
+
+ 
+
+ 
+
+%% --------------------------------------------------------------------------------------
+
+%% This subfunction calculates the likelihood of the dataset (It's already area-weighted)
+
+%% --------------------------------------------------------------------------------------
+
+function LL = sub_likelihood(Obs_matrix,ModelConnMat,Prop_sampled,J_SampledReefs,RemoveVec,BS)
+
+ 
+
+LL = 0;
+
+if BS == 1
+
+   J_SampledReefs = randsample(J_SampledReefs,length(J_SampledReefs),'true');
+
+end
+
+ 
+
+for sr = 1:length(J_SampledReefs)
+
+   % What were the observations on this reef?
+
+   SV = Obs_matrix(:,J_SampledReefs(sr));
+
+   
+
+   % What's the model-generated probability vector?
+
+   PV = [ModelConnMat(:,J_SampledReefs(sr)); 0];
+
+   PV(end) = sum(RemoveVec.*PV(1:end-1));
+
+   PV(1:end-1) = PV(1:end-1).*(1-RemoveVec);
+
+   PV = PV./sum(PV);
+
+   PV(PV == 0) = 1e-8; % LLs can't handle zeros. Set at resolution of BP model
+
+   
+
+   LL = LL + sum(SV.*log(PV));
+
+end
