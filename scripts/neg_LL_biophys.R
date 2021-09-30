@@ -19,7 +19,7 @@ for(i in 1:nrow(prop_samp_vec)){
    
     for(j in 1:nrow(prop_samp_vec)){
       
-    RecruitsFromAssignedReefs = ExpectedRecruits[sampled_reefs_vec[i], sampled_reefs_vec[j]]
+    RecruitsFromAssignedReefs = ExpectedRecruits[i,j]
     UnassignedRecruits[i,j] = RecruitsFromAssignedReefs*(1-prop_samp_source)^2
    }
 }
@@ -38,7 +38,7 @@ for(i in 1:nrow(prop_samp_vec)){
    
     for(j in 1:nrow(prop_samp_vec)){
       
-    RecruitsFromAssignedReefs = ExpectedRecruits[sampled_reefs_vec[i], sampled_reefs_vec[j]]
+    RecruitsFromAssignedReefs = ExpectedRecruits[i,j]
     AssignedRecruits[i,j] = RecruitsFromAssignedReefs*(prop_samp_source^2 + 2*prop_samp_source*(1 - prop_samp_source))
    }
 }
