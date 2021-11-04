@@ -1,7 +1,0 @@
-time_scale,time_id,k,theta,mdd,med,dist90,log_like,data_source
-annual,2012,-2.16,4.99,4.21,4.01,7.88,-148583.15278378,simulation
-annual,2013,-0.46,0.63,4.21,2.32,10.38,-549040.283873526,simulation
-annual,2014,0.28,0.53,3.65,1.78,9.16,-527734.313511732,simulation
-interannual,2012-4,-0.1,0.58,3.9,2.03,9.72,-1682004.74932801,simulation
-season,NEM,-0.23,0.61,3.71,2,9.19,-1566546.33708308,simulation
-season,SWM,0.6,0.42,7.89,3.17,20.02,-90949.1395699403,simulation
