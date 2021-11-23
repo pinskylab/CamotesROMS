@@ -89,20 +89,20 @@ MonsoonUnassigned <- rbind(AddDestGenMonsoon[!MonsoonUnassigned, on =.( offs_sit
 #sum(MonsoonUnassigned$num_unassigned)#should be 256-17=239
 
 #make into parentage matrices
-KernelGenMatNEM <- rbind(dcast(ParMonsoon[monsoon=="NEM"][, .(par_site, offs_site, n_matches)][ #for assigned particles (not from "Other") keep the source/dest columns that will be expanded into wide form to become the connectivity matrix. Filtering for time period etc can be done in i here.
+KernelGenMatNEM <- as.matrix(rbind(dcast(ParMonsoon[monsoon=="NEM"][, .(par_site, offs_site, n_matches)][ #for assigned particles (not from "Other") keep the source/dest columns that will be expanded into wide form to become the connectivity matrix. Filtering for time period etc can be done in i here.
     order(par_site, offs_site)] #keep sites in alphabetical order so the matrix is correctly formatted!
         , par_site ~ offs_site, value.var="n_matches")[
     ,-"par_site"], #remove the source column after casting
-      t(as.matrix(MonsoonUnassigned[monsoon=="NEM"][order(offs_site)][, .(num_unassigned)])), use.names=FALSE)
+      t(as.matrix(MonsoonUnassigned[monsoon=="NEM"][order(offs_site)][, .(num_unassigned)])), use.names=FALSE))
 KernelGenMatNEM[is.na(KernelGenMatNEM)] <- 0
 #dim(KernelGenMatNEM)
 #sum(KernelGenMatNEM)
 
-KernelGenMatSWM <- rbind(dcast(ParMonsoon[monsoon=="SWM"][, .(par_site, offs_site, n_matches)][ #for assigned particles (not from "Other") keep the source/dest columns that will be expanded into wide form to become the connectivity matrix. Filtering for time period etc can be done in i here.
+KernelGenMatSWM <- as.matrix(rbind(dcast(ParMonsoon[monsoon=="SWM"][, .(par_site, offs_site, n_matches)][ #for assigned particles (not from "Other") keep the source/dest columns that will be expanded into wide form to become the connectivity matrix. Filtering for time period etc can be done in i here.
     order(par_site, offs_site)] #keep sites in alphabetical order so the matrix is correctly formatted!
         , par_site ~ offs_site, value.var="n_matches")[
     ,-"par_site"], #remove the source column after casting
-      t(as.matrix(MonsoonUnassigned[monsoon=="SWM"][order(offs_site)][, .(num_unassigned)])), use.names=FALSE)
+      t(as.matrix(MonsoonUnassigned[monsoon=="SWM"][order(offs_site)][, .(num_unassigned)])), use.names=FALSE))
 KernelGenMatSWM[is.na(KernelGenMatSWM)] <- 0
 KernelGenMat2014 <- as.matrix(rbind(dcast(TotalPar2012_4[year==2014, .(par_site, offs_site, n_matches)][ #for assigned particles (not from "Other") keep the source/dest columns that will be expanded into wide form to become the connectivity matrix. Filtering for time period etc can be done in i here.
     order(par_site, offs_site)] #keep sites in alphabetical order so the matrix is correctly formatted!
