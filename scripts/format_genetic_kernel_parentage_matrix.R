@@ -12,23 +12,23 @@ unique(cbind(SurveyData[year==2014 & prop_anem_samp >0 ][, .(offs_site=site)],
 
 #format genetic parentage matrices for each year and all years combined
 KernelGenMat2012 <- rbind(as.matrix(dcast(full_join(AllRecruitsGenWithMonsoon[year==2012 & matched_offs=="Y", .N, by=c("par_site", "offs_site")], AddDestGen[year==2012, -"year"])[order(par_site, offs_site)], par_site ~ offs_site, value.var="N")[, -"par_site"]),  #[is.na(N), N :=0]
-t(as.matrix(full_join(AllRecruitsGenWithMonsoon[year==2012 & matched_offs=="N", .N, by=site][order(site)], AddDestGen[year==2012, .(site=offs_site)])[, -"site"])))
+t(as.matrix(full_join(AllRecruitsGenWithMonsoon[year==2012 & matched_offs=="N", .N, by=site], AddDestGen[year==2012, .(site=offs_site)])[order(site)][, -"site"])))
 
 KernelGenMat2012[is.na(KernelGenMat2012)] <- 0
 
 KernelGenMat2013 <- rbind(as.matrix(dcast(full_join(AllRecruitsGenWithMonsoon[year==2013 & matched_offs=="Y", .N, by=c("par_site", "offs_site")], AddDestGen[year==2013, -"year"])[order(par_site, offs_site)], par_site ~ offs_site, value.var="N")[, -"par_site"]),  #[is.na(N), N :=0]
-t(as.matrix(full_join(AllRecruitsGenWithMonsoon[year==2013 & matched_offs=="N", .N, by=site][order(site)], AddDestGen[year==2013, .(site=offs_site)])[, -"site"])))
+t(as.matrix(full_join(AllRecruitsGenWithMonsoon[year==2013 & matched_offs=="N", .N, by=site], AddDestGen[year==2013, .(site=offs_site)])[order(site)][, -"site"])))
 
 KernelGenMat2013[is.na(KernelGenMat2013)] <- 0
 
 KernelGenMat2014 <- rbind(as.matrix(dcast(full_join(AllRecruitsGenWithMonsoon[year==2014 & matched_offs=="Y", .N, by=c("par_site", "offs_site")], AddDestGen[year==2014, -"year"])[order(par_site, offs_site)], par_site ~ offs_site, value.var="N")[, -"par_site"]),  #[is.na(N), N :=0]
-t(as.matrix(full_join(AllRecruitsGenWithMonsoon[year==2014 & matched_offs=="N", .N, by=site][order(site)], AddDestGen[year==2014, .(site=offs_site)])[, -"site"])))
+t(as.matrix(full_join(AllRecruitsGenWithMonsoon[year==2014 & matched_offs=="N", .N, by=site], AddDestGen[year==2014, .(site=offs_site)])[order(site)][, -"site"])))
 
 KernelGenMat2014[is.na(KernelGenMat2014)] <- 0
 
 #all year
 KernelGenMat2012_4 <- rbind(as.matrix(dcast(full_join(AllRecruitsGenWithMonsoon[matched_offs=="Y", .N, by=c("par_site", "offs_site")], AddDestGen[year==2014, -"year"])[order(par_site, offs_site)], par_site ~ offs_site, value.var="N")[, -"par_site"]),  #[is.na(N), N :=0]
-t(as.matrix(full_join(AllRecruitsGenWithMonsoon[ matched_offs=="N", .N, by=site][order(site)], AddDestGen[year==2014, .(site=offs_site)])[, -"site"])))
+t(as.matrix(full_join(AllRecruitsGenWithMonsoon[ matched_offs=="N", .N, by=site], AddDestGen[year==2014, .(site=offs_site)])[order(site)][, -"site"])))
 
 KernelGenMat2012_4[is.na(KernelGenMat2012_4)] <- 0
 
@@ -36,12 +36,12 @@ KernelGenMat2012_4[is.na(KernelGenMat2012_4)] <- 0
 
 #for monsoon seasons
 KernelGenMatSWM <- rbind(as.matrix(dcast(full_join(AllRecruitsGenWithMonsoon[monsoon=="SWM" & matched_offs=="Y", .N, by=c("par_site", "offs_site")], AddDestGen[year==2014, -"year"])[order(par_site, offs_site)], par_site ~ offs_site, value.var="N")[, -"par_site"]),  #[is.na(N), N :=0]
-t(as.matrix(full_join(AllRecruitsGenWithMonsoon[monsoon=="SWM" & matched_offs=="N", .N, by=site][order(site)], AddDestGen[year==2014, .(site=offs_site)])[, -"site"])))
+t(as.matrix(full_join(AllRecruitsGenWithMonsoon[monsoon=="SWM" & matched_offs=="N", .N, by=site], AddDestGen[year==2014, .(site=offs_site)])[order(site)][, -"site"])))
 
 KernelGenMatSWM[is.na(KernelGenMatSWM)] <- 0
 
 KernelGenMatNEM <- rbind(as.matrix(dcast(full_join(AllRecruitsGenWithMonsoon[monsoon=="NEM" & matched_offs=="Y", .N, by=c("par_site", "offs_site")], AddDestGen[year==2014, -"year"])[order(par_site, offs_site)], par_site ~ offs_site, value.var="N")[, -"par_site"]),  #[is.na(N), N :=0]
-t(as.matrix(full_join(AllRecruitsGenWithMonsoon[monsoon=="NEM" & matched_offs=="N", .N, by=site][order(site)], AddDestGen[year==2014, .(site=offs_site)])[, -"site"])))
+t(as.matrix(full_join(AllRecruitsGenWithMonsoon[monsoon=="NEM" & matched_offs=="N", .N, by=site], AddDestGen[year==2014, .(site=offs_site)])[order(site)][, -"site"])))
 
 KernelGenMatNEM[is.na(KernelGenMatNEM)] <- 0
 
