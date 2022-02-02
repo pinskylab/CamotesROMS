@@ -3,6 +3,8 @@ format_biophys_normalized_matrix <- function(SimConn, total_release_days,AddDest
 
 	AllYearsRec <- SimConn[, .(total_particles_rec = .N), by = c("source", 
 	        "dest")]
+	AllYearsRec <- rbind(unique(AddDestSim, by=c("source", "dest"))[, -c("year", "monsoon")][!AllYearsRec, on = .(source, 
+		        dest)][, total_particles_rec := 0], AllYearsRec)
 	AllYearsRelease <- unique(SimConn[, .(total_particles_released = as.numeric(daily_particles_released) * 
 	        as.numeric(total_release_days)), by = c("source")], by = "source")
 	AllYearsNormConn <- AllYearsRelease[AllYearsRec, on = "source"][ 
@@ -14,6 +16,10 @@ format_biophys_normalized_matrix <- function(SimConn, total_release_days,AddDest
 	        -"source"]))
 	FullBiophysMatNorm[is.na(FullBiophysMatNorm)] <- 0
 	#sum(FullBiophysMatNorm)
+	
+	#make annual matrices with all of the particle data
+	AnnualRec <- SimConn[ , .(annual_particles_rec = .N), by= c("source","dest", "year")] #all particles recruiting along each route FILTER HERE FOR TIME 	PERIOD***
+	AnnualRelease <- unique(SimConn[, .(annual_particles_released = as.numeric(daily_particles_released)*as.numeric(num_release_days_annual)), by= 	c("source", "year")], by= c("source", "year")) #calculate the number of particles released over the time frame by multiplyig the release days by the 	number of particles released daily. fread() converts big numbers to integers so specify as numeric to avoid integer overflow NAs
 
 	AnnualRec <- rbind(unique(AddDestSim, by=c("source", "dest", "year"))[, -"monsoon"][!AnnualRec, on = .(source, 
 	        dest, year)][, annual_particles_rec := 0], AnnualRec)
