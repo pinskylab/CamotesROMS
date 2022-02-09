@@ -1,7 +1,5 @@
-data_source,time_scale,sd_k,cv_theta,cv_mdd,cv_med,cv_dist90,sd_kurtosis
-simulation_08PLD,annual,1.25,1.24,0.08,0.43,0.14,9.85
-simulation_08PLD,season,0.58,0.26,0.51,0.32,0.52,21.24
-simulation_15PLD,annual,0.68,0.2,0.23,0.32,0.21,3.67
-simulation_15PLD,season,0.12,0.12,0.43,0.37,0.45,3.28
-genetics,annual,3.03,0.83,1.07,0.22,1.18,210.25
-genetics,season,2.93,1.22,0.07,0.69,0.14,46.29
+data_source,time_scale,cv_theta,cv_mdd
+genetics,annual,0.828,1.074
+genetics,season,1.218,0.072
+simulation_08PLD,annual,0.093,0.076
+simulation_08PLD,season,0.238,0.388
