@@ -55,7 +55,7 @@ format_biophys_normalized_matrix <- function(SimConn, total_release_days,AddDest
 
 	MonsoonRec <- SimConn[, .(monsoon_particles_rec = .N), by = c("source", 
 	    "dest", "monsoon")]
-	MonsoonRelease <- unique(SimConn[, .(monsoon_particles_released = as.numeric(daily_particles_released) * 
+	MonsoonRelease <- unique(SimConn[, .(monsoon_particles_released = as.numeric(daily_particles_released) *
 	    as.numeric(num_release_days_seasonal)), by = c("source", 
 	    "monsoon")], by = c("source", "monsoon"))
 	MonsoonRec <- rbind(unique(AddDestSim, by=c("source", "dest", "monsoon"))[, -"year"][!MonsoonRec, on = .(source, 
