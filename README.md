@@ -15,5 +15,9 @@ This repository contains:
 
 Please contact malin.pinsky[at]rutgers.edu with questions.
 
-## BCO-DMO Data Accessibility
+## Data Accessibility
+For data not on this git repo:
+
 Pinsky, M., Stuart, M. (2023) Temperature loggers (HOBO) placed in two locations off the coast of the West coast of Leyte, the Philippines , 2012-2019. Biological and Chemical Oceanography Data Management Office (BCO-DMO). (Version 2) Version Date 2023-03-06. doi:10.26008/1912/bco-dmo.862415.2 
+
+Pinsky, M. L.; Drenkard, E. J.; Curchitser, E. (2023): CamotesROMS surface currents. figshare. Dataset. https://doi.org/10.6084/m9.figshare.22827059.v1
