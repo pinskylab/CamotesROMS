@@ -11,7 +11,7 @@ This repository contains:
 - script_output/ Content generated from code in notebooks/
 - empirical_data/ Data from field (genetic) observations of dispersal, used for comparison to Camotes-ROMS connectivity simulations.
 - ROMS/ Data input and output from ROMS model.
-- scripts/ Raw R code verisions of content in notebooks/
+- scripts/ Raw R code versions of content in Jupyter notebooks, scripts called by notebooks, and a script to make Fig. S2 (eddy kinetic energy).
 
 Please contact malin.pinsky[at]rutgers.edu with questions.
 
