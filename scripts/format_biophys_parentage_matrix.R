@@ -88,9 +88,9 @@ matrices <- list(AnnualBiophysMat2012=AnnualBiophysMat2012, AnnualBiophysMat2013
 
 return(matrices)
 }
-#fwrite(FullBiophysMat, file="~/oceanography/script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2012-14ForROMSComp15DayPLD.csv")
-#fwrite(AnnualBiophysMat2012, file="~/oceanography/script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2012ForROMSComp15DayPLD.csv")
-#fwrite(AnnualBiophysMat2013, file="~/oceanography/script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2013ForROMSComp15DayPLD.csv")
-#fwrite(AnnualBiophysMat2014, file="~/oceanography/script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2014ForROMSComp15DayPLD.csv")
-#fwrite(MonsoonBiophysMatNEM, file="~/oceanography/script_output/ROMSDataTables/20210917_BioPhysParentageMatrixNEM2012-14ForROMSComp15DayPLD.csv")
-#fwrite(MonsoonBiophysMatSWM, file="~/oceanography/script_output/ROMSDataTables/20210917_BioPhysParentageMatrixSWM2012-14ForROMSComp15DayPLD.csv")
+#fwrite(FullBiophysMat, file="script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2012-14ForROMSComp15DayPLD.csv")
+#fwrite(AnnualBiophysMat2012, file="script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2012ForROMSComp15DayPLD.csv")
+#fwrite(AnnualBiophysMat2013, file="script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2013ForROMSComp15DayPLD.csv")
+#fwrite(AnnualBiophysMat2014, file="script_output/ROMSDataTables/20210917_BioPhysParentageMatrix2014ForROMSComp15DayPLD.csv")
+#fwrite(MonsoonBiophysMatNEM, file="script_output/ROMSDataTables/20210917_BioPhysParentageMatrixNEM2012-14ForROMSComp15DayPLD.csv")
+#fwrite(MonsoonBiophysMatSWM, file="script_output/ROMSDataTables/20210917_BioPhysParentageMatrixSWM2012-14ForROMSComp15DayPLD.csv")

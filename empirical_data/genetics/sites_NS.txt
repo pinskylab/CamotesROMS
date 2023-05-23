@@ -1,0 +1,20 @@
+site, index
+Palanas, 1
+Wangag, 2
+N. Magbangon, 3
+S. Magbangon, 4
+Cabatoan, 5
+Caridad Cemetery, 6
+Caridad Proper, 7
+Hicgop South, 8
+Sitio Tugas, 9
+Elementary School, 10
+Sitio Lonas, 11
+San Agustin, 12
+Poroc San Flower, 13
+Poroc Rose, 14
+Visca, 15
+Gabas, 16
+Tamakin Dacot, 17
+Haina, 18
+Sitio Baybayon, 19

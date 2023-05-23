@@ -2,7 +2,6 @@ Packages <- c("dplyr",  "nleqslv", "broom","cubature", "geosphere", "data.table"
 
 invisible(suppressPackageStartupMessages(lapply(Packages, library, character.only = TRUE)))
 
-setwd('/local/home/katrinac/oceanography')
 "%!in%" <- function(x,table) match(x,table, nomatch = 0) == 0
 
 #make a table of the dates of release for simulations, for calculating the number of particles released in each time frame
@@ -30,4 +29,4 @@ ReleaseDays <- AllDates[, .(num_release_days_seasonal=.N), by=c("year_sampled", 
 total_release_days <- AllDates[year_sampled %in% c(2012, 2013, 2014), .N]#for the all year kernel- how many days of the simulation conincide with our particle sampling?
 total_release_days #should be 687
 
-save(AllDates, ReleaseDays, total_release_days, file= "~/oceanography/script_output/ROMSDataTables/2021-11-04_SeededParticleInfo.Rdata")
+save(AllDates, ReleaseDays, total_release_days, file= "script_output/ROMSDataTables/2021-11-04_SeededParticleInfo.Rdata")

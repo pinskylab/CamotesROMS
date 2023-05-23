@@ -1,5 +1,5 @@
 #https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Script_outputs/cumulative_prop_hab_sampled_by_site.RData)
-load("~/parentage/r_data/cumulative_prop_hab_sampled_by_site.RData")
+load("empirical_data/genetics/cumulative_prop_hab_sampled_by_site.RData")
 setDT(cumulative_prop_hab_sampled_by_site)
 
 #NB I checked that this data.table version matched what I made with the data.frame in all previous code 4/23/2021
@@ -24,4 +24,4 @@ sum(cumulative_prop_hab_sampled_by_site[site  %in% c("S. Magbangon", "N. Magbang
 
 summary(PropSamp[,PropAnemSamp]) #nothing should be more than 1
 
-fwrite(PropSamp, file="~/oceanography/script_output/SurveyData/ProportionHabitatSampled.csv")
+fwrite(PropSamp, file="script_output/SurveyData/ProportionHabitatSampled.csv")

@@ -1,22 +1,22 @@
 #clownfish metadata
-load("~/parentage/r_data/total_sampling_across_years.RData")
-load("~/parentage/r_data/sampled_area_each_year.RData")
+load("empirical_data/genetics/total_sampling_across_years.RData")
+load("empirical_data/genetics/sampled_area_each_year.RData")
 
-#download.file(url = "https://github.com/pinskylab/genomics/blob/master/data/fish-obs.RData?raw=true", destfile = "~/parentage/r_data/fish-obs.RData")
-fish_obs <- readRDS("~/parentage/r_data/fish-obs.RData") 
-load("~/parentage/r_data/site_dist_info.RData")
-#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Data_from_database/anem_db.RData?raw=true", destfile = "~/parentage/r_data/anem_db.RData")
-load("~/parentage/r_data/anem_db.RData")
-#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Data_from_database/dives_db.RData?raw=true", destfile = "~/parentage/r_data/dives_db.RData")
-load("~/parentage/r_data/dives_db.RData")
-#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Data_from_database/fish_db.RData?raw=true", destfile = "~/parentage/r_data/dives_db.RData")
-load("~/parentage/r_data/fish_db.RData")
-load("~/parentage/r_data/gps_db.RData")
+#download.file(url = "https://github.com/pinskylab/genomics/blob/master/data/fish-obs.RData?raw=true", destfile = "empirical_data/genetics/fish-obs.RData")
+fish_obs <- readRDS("empirical_data/genetics/fish-obs.RData") 
+load("empirical_data/genetics/site_dist_info.RData")
+#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Data_from_database/anem_db.RData?raw=true", destfile = "empirical_data/genetics/anem_db.RData")
+load("empirical_data/genetics/anem_db.RData")
+#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Data_from_database/dives_db.RData?raw=true", destfile = "empirical_data/genetics/dives_db.RData")
+load("empirical_data/genetics/dives_db.RData")
+#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Data_from_database/fish_db.RData?raw=true", destfile = "empirical_data/genetics/dives_db.RData")
+load("empirical_data/genetics/fish_db.RData")
+load("empirical_data/genetics/gps_db.RData")
 
 ##read in the sites that we sampled each year
-N_gen_par <- read.table(file="~/parentage/colony2/20190523_1340loci/input/all_parents_corrected.txt", header = TRUE, stringsAsFactors = F) %>%#not sure that I need the parents here
+N_gen_par <- read.table(file="empirical_data/genetics/all_parents_corrected.txt", header = TRUE, stringsAsFactors = F) %>%#not sure that I need the parents here
     mutate(fish_indiv=as.character(fish_indiv))
-N_gen_offs <- read.table(file="~/parentage/colony2/20190523_1340loci/input/all_offspring_corrected.txt", header=T, stringsAsFactors = F) %>%
+N_gen_offs <- read.table(file="empirical_data/genetics/all_offspring_corrected.txt", header=T, stringsAsFactors = F) %>%
     mutate(fish_indiv=as.character(fish_indiv))
 
 
@@ -77,4 +77,4 @@ AnnualRecsSamp <- bind_rows(N_gen_offs_annual %>%
                         ungroup()
 sum(AnnualRecsSamp$n_offs_gen) #should be 791
 
-#fwrite(AnnualRecsSamp, file="~/oceanography/script_output/SurveyData/AnnualRecruitsSampled.csv")
+#fwrite(AnnualRecsSamp, file="script_output/SurveyData/AnnualRecruitsSampled.csv")

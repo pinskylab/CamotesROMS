@@ -1,13 +1,12 @@
 #03/08/2018 code to identify sites in ROMS model vertices list from Liz Drenkard
 
 ####SET UP#######
-setwd("~/Documents/GradSchool/oceanography")
 library(dplyr)
 library(rgdal)
 library(tidyr)
 
 ###read txt file with ROMS vertices
-vertices <- read.table("Camotes_Sea_ROMS_Grid_Vertices.txt", header=FALSE, sep=" ")
+vertices <- read.table("ROMS/input/Camotes_Sea_ROMS_Grid_Vertices.txt", header=FALSE, sep=" ")
 
 #label rows and columns so I can find which match site domains.
 dim(vertices)
@@ -31,13 +30,13 @@ tidy_vertices2$id_number <- as.factor(tidy_vertices2$id_number)
 target <- c(1, 6, 11, 16)
 no_rep <- tidy_vertices2 %>% group_by(id_number) %>% arrange(id_number) %>% filter(row_number(id_number) %in% target)
 
-write.csv(no_rep, "camotes_vertices_sites.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.csv(no_rep, "ROMS/input/camotes_vertices_sites.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 #read in row id numbers from QGIS visual survey to get vertice points
-results <- read.table(file="camotes_site_vertices.txt", header=TRUE)
+results <- read.table(file="ROMS/input/camotes_site_vertices.txt", header=TRUE)
 
 site_vertices <- inner_join(results, vertices, by="id_number")
-write.table(site_vertices, "camotes_vertices_sites_results.txt", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.table(site_vertices, "ROMS/input/camotes_vertices_sites_results.txt", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 #make a text file with near north and near south site points 
 test <- vertices %>% filter(one_lon <=124.81000 & one_lon >=124.60000) %>% filter(one_lat <=10.6330 | one_lat >=10.8700)
@@ -56,7 +55,7 @@ tidy_vertices2$id_number <- as.factor(tidy_vertices2$id_number)
 target <- c(1, 6, 11, 16)
 no_rep <- tidy_vertices2 %>% group_by(id_number) %>% arrange(id_number) %>% filter(row_number(id_number) %in% target)
 
-write.csv(no_rep, "camotes_vertices_nearby_sites.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.csv(no_rep, "ROMS/input/camotes_vertices_nearby_sites.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 #just all vertices
 tidy_vertices <- gather(vertices, "id_lon", "lon", 1:4)
@@ -66,7 +65,7 @@ tidy_vertices2$id_number <- as.factor(tidy_vertices2$id_number)
 target <- c(1, 6, 11, 16)
 no_rep <- tidy_vertices2 %>% group_by(id_number) %>% arrange(id_number) %>% filter(row_number(id_number) %in% target)
 
-write.csv(no_rep, "camotes_vertices_all.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.csv(no_rep, "ROMS/input/camotes_vertices_all.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 ####make a csv for camotes or cuatro islas
 
@@ -75,7 +74,7 @@ camotes <- read.table(file="cuatro_islas.txt", header=TRUE)
 
 site_vertices_camotes <- inner_join(camotes, vertices, by="id_number")
 site_vertices_camotes<- distinct(site_vertices_camotes)
-write.table(site_vertices_camotes, "cuatro_islas_results.txt", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.table(site_vertices_camotes, "ROMS/input/cuatro_islas_results.txt", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 
 #make csv to read in and check the vertices
@@ -87,15 +86,15 @@ tidy_vertices2$id_number <- as.factor(tidy_vertices2$id_number)
 target <- c(1, 6, 11, 16)
 no_rep_islas <- tidy_vertices2 %>% group_by(id_number) %>% arrange(id_number) %>% filter(row_number(id_number) %in% target)
 
-write.csv(no_rep_islas, "cuatro_islas_results.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.csv(no_rep_islas, "ROMS/input/cuatro_islas_results.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 ####make a csv for all 
 
 #read in row id numbers from QGIS visual survey to get vertice points
-results2 <- read.table(file="camotes_nearby_sites.txt", header=TRUE)
+results2 <- read.table(file="ROMS/input/camotes_nearby_sites.txt", header=TRUE)
 
 site_vertices_all <- inner_join(results2, vertices, by="id_number")
-write.table(site_vertices_all, "camotes_nearby_sites_results.txt", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.table(site_vertices_all, "ROMS/input/camotes_nearby_sites_results.txt", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 
 #make csv to read in and check the vertices
@@ -108,7 +107,7 @@ tidy_vertices2$id_number <- as.factor(tidy_vertices2$id_number)
 target <- c(1, 6, 11, 16)
 no_rep_all <- tidy_vertices2 %>% group_by(id_number) %>% arrange(id_number) %>% filter(row_number(id_number) %in% target)
 
-write.csv(no_rep_all, "camotes_vertices_all.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
+write.csv(no_rep_all, "ROMS/input/camotes_vertices_all.csv", row.names=FALSE, col.names=TRUE, quote=FALSE)
 
 
 ####UNNECESSARY######

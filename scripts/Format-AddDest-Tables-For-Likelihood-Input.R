@@ -1,4 +1,4 @@
-SimConn <- fread(file="~/oceanography/script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm08DayPLD.csv")[year %in% c(2012, 2013, 2014) & dest != "CAI"][#filter out CAI as a destination for now, not very well spatially defined
+SimConn <- fread(file="script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm08DayPLD.csv")[year %in% c(2012, 2013, 2014) & dest != "CAI"][#filter out CAI as a destination for now, not very well spatially defined
    ,`:=`(daily_particles_rec=as.numeric(daily_particles_rec),daily_particles_released=as.numeric(daily_particles_released))][
     source == "Other" | source == "CAI", source:="unknown"][ #aggregate the CAI and other sites as "unknown for likelihood functions"
     , daily_particles_rec := sum(daily_particles_rec), by=c("date", "source", "dest")][
@@ -22,4 +22,4 @@ unique(cbind(SurveyData[year==2014 & prop_anem_samp >0 ][, .(offs_site=site)],
 
 AddDestGen <- rbind(cbind(AddDestGenAnnual, data.table(monsoon = rep("NEM",nrow(AddDestGenAnnual)))), cbind(AddDestGenAnnual, data.table(monsoon = rep("SWM",nrow(AddDestGenAnnual)))))
 
-save(AddDestSim,  AddDestGen, file="~/oceanography/script_output/SurveyData/for_likelihood_functions/2022-01-20_AddDestTables.Rdata")
+save(AddDestSim,  AddDestGen, file="script_output/SurveyData/for_likelihood_functions/2022-01-20_AddDestTables.Rdata")

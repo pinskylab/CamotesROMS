@@ -1,5 +1,4 @@
 #2017 drifter visualization
-setwd("~/Documents/GradSchool/parentage")
 library(maps)
 library(mapdata)
 library(maptools)
@@ -7,7 +6,7 @@ library(rgdal)
 library(ggmap)
 library(ggplot2)
 
-drifters <- read.csv("2017drifters.csv")
+drifters <- read.csv("empirical_data/2017drifters.csv")
 map_new <- readOGR("leyte", "coastlines_leyte")
 plot(map_new, xlim=c(124, 125 ), ylim=c(10.5,10.9))
 par(new=TRUE)

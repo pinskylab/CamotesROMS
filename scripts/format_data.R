@@ -2,31 +2,30 @@ Packages <- c("dplyr",  "nleqslv", "broom","cubature", "geosphere", "data.table"
 
 invisible(suppressPackageStartupMessages(lapply(Packages, library, character.only = TRUE)))
 
-setwd('/local/home/katrinac/oceanography')
 "%!in%" <- function(x,table) match(x,table, nomatch = 0) == 0
-source("~/parentage/kernel_fitting/1340_loci/functions/ll_kt_both_bbmle.R")
-source("~/parentage/kernel_fitting/1340_loci/functions/ll_kt_both_grid_search.R")
-source("~/oceanography/scripts/neg_LL_biophys.R")
-#source("~/oceanography/scripts/PredictedProportions.R")
+source("scripts/ll_kt_both_bbmle.R")
+source("scripts/ll_kt_both_grid_search.R")
+source("scripts/neg_LL_biophys.R")
+#source("scripts/PredictedProportions.R")
 
 #read in the kernel fitting summary
-kernels <- fread(file="~/parentage/kernel_fitting/1340_loci/final_results/tables/kernel_fitting_summary.csv")
-kernel2012_14 <- fread(file="~/oceanography/empirical_data/genetics/GenKernelsForROMSComp2012-14.csv")
+kernels <- fread(file="empirical_data/genetics/kernel_fitting_summary.csv")
+kernel2012_14 <- fread(file="empirical_data/genetics/GenKernelsForROMSComp2012-14.csv")
 
 #read in the centroids adjusted for the simulation, so the Magbangons combined 
-#centroids <- fread(file="~/oceanography/script_output/SurveyData/SimulationCentroids.csv")
-Centroids <- fread(file="~/oceanography/empirical_data/site_centroids_SimTest.csv")
+#centroids <- fread(file="script_output/SurveyData/SimulationCentroids.csv")
+Centroids <- fread(file="empirical_data/site_centroids_SimTest.csv")
 setorder(Centroids, site)
 #read in the table with number of recruits sampled at each site for each year
-AnnualRecsSamp <- fread(file="~/oceanography/script_output/SurveyData/AnnualRecruitsSampled.csv")
+AnnualRecsSamp <- fread(file="script_output/SurveyData/AnnualRecruitsSampled.csv")
 #read in the table of the proportion of anemones sampled at each site for each year
-PropSamp <- fread(file="~/oceanography/script_output/SurveyData/ProportionHabitatSampled.csv")
+PropSamp <- fread(file="script_output/SurveyData/ProportionHabitatSampled.csv")
 setnames(PropSamp, c("PropAnemSamp", "TotalAnems"), c("prop_anem_samp", "total_anems"))
 #read in the ROMS simulation connectivity table with metadata, not yet subsetted (*but check this)
-#SimConn <- fread(file="~/oceanography/script_output/ROMSDataTables/SimConnectivityTableWithMetaLongForm.csv")
+#SimConn <- fread(file="script_output/ROMSDataTables/SimConnectivityTableWithMetaLongForm.csv")
 
 #add in the numbers of particles seeded at each site
-SeededParticles <- fread("~/oceanography/ROMS/data/Particles_Per_Release_Site_Renamed.csv")
+SeededParticles <- fread("ROMS/data/Particles_Per_Release_Site_Renamed.csv")
 setnames(SeededParticles,c("source", "daily_particles_released")) 
 #DateJoin <- SeededParticles[DateJoin, on="source"][, particles_released_daily := as.numeric(particles_released_daily)] 
 
@@ -45,7 +44,7 @@ SitesDest <- Centroids
 DistMatm <- distm(SitesSource[,c('lon','lat')], SitesSource[,c('lon','lat')], fun=distVincentyEllipsoid)
 Distances <- DistMatm*10^-3
 #read in the reef areas for the kernel fitting
-Area <- fread("~/oceanography/empirical_data/site_area_header_nonsurveyed_simulation_kernels_test.csv") %>%
+Area <- fread("empirical_data/site_area_header_nonsurveyed_simulation_kernels_test.csv") %>%
     arrange(site) %>%
     filter(site %!in% c("near_north_full1", "near_north_full2", "near_north_full3", "near_south_full1", "near_south_full2", "near_south_full3")) %>%
     mutate(kmsq=msq*10^-6)# %>%
@@ -67,8 +66,8 @@ SurveyData <- AnnualRecsSamp[PropSamp, on=.(year=end_year, site)][#join the samp
 #Area[site %!in% centroids$site] #should be nothing
 
 #Allison's abundance time series data 
-#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Script_outputs/females_df_F.RData?raw=true", destfile = "~/oceanography/empirical_data/genetics/females_df_F.RData")
-load("~/oceanography/empirical_data/genetics/females_df_F.RData")
+#download.file(url = "https://github.com/pinskylab/Clownfish_persistence/blob/master/Data/Script_outputs/females_df_F.RData?raw=true", destfile = "empirical_data/genetics/females_df_F.RData")
+load("empirical_data/genetics/females_df_F.RData")
 Abundance <- as.data.table(females_df_F)
 setnames(Abundance, "nF", "num_females")
 Abundance <- unique(Abundance[site %like% "Magbangon", site := "Magbangon"][ #collapse Magbangon values
@@ -124,9 +123,9 @@ total_release_days #should be 687
 #setcolorder(SimConn, c("particle_id", "source", "dest", "year", "monsoon", "date"))
 #
 ##at this point, we can make the raw number assignment matrix, but we want to make a normalized version that is num assigned from a source to a destination/ num released from that source
-##fwrite(SimConn, file="~/oceanography/script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm.csv")
+##fwrite(SimConn, file="script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm.csv")
 
-SimConn <- fread(file="~/oceanography/script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm.csv")[dest != "CAI"] #filter out CAI as a destination for now, not very well spatially defined
+SimConn <- fread(file="script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm.csv")[dest != "CAI"] #filter out CAI as a destination for now, not very well spatially defined
 
 
 #each year will require a different set of survey data, so make a list of each and index by site for fast look up
@@ -195,7 +194,7 @@ best_params
 
 
 #write profile results
-#write.csv(nll_matrix, file="~/oceanography/script_output/KernelFits/LikelihoodProfileBiophysical2012-4.csv", row.names=T, quote=FALSE)
+#write.csv(nll_matrix, file="script_output/KernelFits/LikelihoodProfileBiophysical2012-4.csv", row.names=T, quote=FALSE)
 
 
 
@@ -340,7 +339,7 @@ dim(MonsoonBiophysMatNormSWM)
 MonsoonBiophysMatNormSWM[is.na(MonsoonBiophysMatNormSWM)] <- 0 #change NAs to zeros
 
 #read in the genetic parentage data and format for comparison
-TotalPar2012_4 <- fread(file="~/oceanography/empirical_data/genetics/parentage_table_2012-14.csv")
+TotalPar2012_4 <- fread(file="empirical_data/genetics/parentage_table_2012-14.csv")
 TotalPar2012_4 <- unique(TotalPar2012_4[offs_site %like% "Magbangon", offs_site := "Magbangon"][par_site %like% "Magbangon", par_site := "Magbangon"][ #collapse Magbangon values
             , n_matches := sum(n_matches), by=c("offs_site", "par_site", "year")], by=c("offs_site", "par_site", "year"))
 
@@ -400,7 +399,7 @@ GenMat2012_4 <- as.matrix(rbind(dcast(TotalPar2012_4[, .(par_site, offs_site, n_
 GenMat2012_4[is.na(GenMat2012_4)] <- 0
 
 #format seasonal genetic parentage
-NEMParentageMat <- fread(file="~/parentage/kernel_fitting/1340_loci/input/20200624_parentage_matrix_NEM2012-14ForROMSComp.csv")
+NEMParentageMat <- fread(file="empirical_data/genetics/20200624_parentage_matrix_NEM2012-14ForROMSComp.csv")
 NEMParentageMat[, par_site := c(as.character(colnames(NEMParentageMat)), "unassigned")]
 
 #make into a table format to make sure Magbangon names get corrected and all routes are represented
@@ -414,7 +413,7 @@ GenMatNEM <- rbind(dcast(NEMParentage[par_site != "unassigned"][order(offs_site,
     ,-"par_site"],
 t(as.matrix(NEMParentage[par_site =="unassigned"][order(offs_site)][, .(n_matches)])), use.names=FALSE)
 
-SWMParentageMat <- fread(file="~/parentage/kernel_fitting/1340_loci/input/20200624_parentage_matrix_SWM2012-14ForROMSComp.csv")
+SWMParentageMat <- fread(file="empirical_data/genetics/20200624_parentage_matrix_SWM2012-14ForROMSComp.csv")
 SWMParentageMat[, par_site := c(as.character(colnames(SWMParentageMat)), "unassigned")]
 
 #make into a table format to make sure Magbangon names get corrected and all routes are represented
@@ -428,12 +427,12 @@ GenMatSWM <- rbind(dcast(SWMParentage[par_site != "unassigned"][order(offs_site,
     ,-"par_site"],
 t(as.matrix(SWMParentage[par_site =="unassigned"][order(offs_site)][, .(n_matches)])), use.names=FALSE)
 
-fwrite(GenMat2012_4, file="~/oceanography/script_output/SurveyData/20210625_ParentageMatrix2012-14ForROMSComp.csv")
-fwrite(GenMat2012, file="~/oceanography/script_output/SurveyData/20210625_ParentageMatrix2012ForROMSComp.csv")
-fwrite(GenMat2013, file="~/oceanography/script_output/SurveyData/20210625_ParentageMatrix2013ForROMSComp.csv")
-fwrite(GenMat2014, file="~/oceanography/script_output/SurveyData/20210625_ParentageMatrix2014ForROMSComp.csv")
-fwrite(GenMatNEM, file="~/oceanography/script_output/SurveyData/20210625_ParentageMatrixNEM2012-14ForROMSComp.csv")
-fwrite(GenMatSWM, file="~/oceanography/script_output/SurveyData/20210625_ParentageMatrixSWM2012-14ForROMSComp.csv")
+fwrite(GenMat2012_4, file="script_output/SurveyData/20210625_ParentageMatrix2012-14ForROMSComp.csv")
+fwrite(GenMat2012, file="script_output/SurveyData/20210625_ParentageMatrix2012ForROMSComp.csv")
+fwrite(GenMat2013, file="script_output/SurveyData/20210625_ParentageMatrix2013ForROMSComp.csv")
+fwrite(GenMat2014, file="script_output/SurveyData/20210625_ParentageMatrix2014ForROMSComp.csv")
+fwrite(GenMatNEM, file="script_output/SurveyData/20210625_ParentageMatrixNEM2012-14ForROMSComp.csv")
+fwrite(GenMatSWM, file="script_output/SurveyData/20210625_ParentageMatrixSWM2012-14ForROMSComp.csv")
 
 
 

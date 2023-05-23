@@ -2,15 +2,14 @@ Packages <- c("dplyr",  "nleqslv", "broom","cubature", "geosphere", "data.table"
 
 invisible(suppressPackageStartupMessages(lapply(Packages, library, character.only = TRUE)))
 
-setwd('/local/home/katrinac/oceanography')
 "%!in%" <- function(x,table) match(x,table, nomatch = 0) == 0
 
 #read in the necessary input data for likelihood functions
-load(file= "~/oceanography/script_output/SurveyData/for_likelihood_functions/2021-11-04_InputSurveyData.Rdata")
-load(file= "~/oceanography/script_output/ROMSDataTables/2021-11-04_SeededParticleInfo.Rdata")
+load(file= "script_output/SurveyData/2021-11-04_InputSurveyData.Rdata")
+load(file= "script_output/ROMSDataTables/2021-11-04_SeededParticleInfo.Rdata")
 
 ##prep biophysical connectivity matrix
-SimConn <- fread(file="~/oceanography/script_output/ROMSDataTables/SimConnectivityTableWithMetaLongForm08DayPLD.csv")[dest != "CAI"] #filter out CAI as a destination for now, not very well spatially defined
+SimConn <- fread(file="script_output/ROMSDataTables/SimConnectivityTableWithMetaLongForm08DayPLD.csv")[dest != "CAI"] #filter out CAI as a destination for now, not very well spatially defined
 #outside of the loop, trim this to only be the destinations we sampled
 SourceJoin <- SurveyData[SimConn, on = .(site = source, year=year_sampled)]
 setnames(SourceJoin, skip_absent=TRUE, c("site", "n_offs_gen", "prop_anem_samp", "total_anems", "num_females"), c("source", "source_num_rec_sampled_annual",  "source_prop_anem_samp", "source_total_anems", "source_num_females"))
@@ -26,4 +25,4 @@ setnames(SimConn, c("sim_monsoon", "NumParentageMatches"), c("monsoon", "num_rou
 setcolorder(SimConn, c("particle_id", "source", "dest", "year", "monsoon", "date"))
 
 #at this point, we can make the raw number assignment matrix, but we want to make a normalized version that is num assigned from a source to a destination/ num released from that source
-#fwrite(SimConn, file="~/oceanography/script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm08DayPLD.csv")
+#fwrite(SimConn, file="script_output/ROMSDataTables/SimConnectivityTableCompleteMetaLongForm08DayPLD.csv")
