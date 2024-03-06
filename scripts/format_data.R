@@ -5,7 +5,7 @@ invisible(suppressPackageStartupMessages(lapply(Packages, library, character.onl
 "%!in%" <- function(x,table) match(x,table, nomatch = 0) == 0
 source("scripts/ll_kt_both_bbmle.R")
 source("scripts/ll_kt_both_grid_search.R")
-source("scripts/neg_LL_biophys.R")
+source("scripts/neg_LL_biophys.R") # not used? loads the LL_biophys() function
 #source("scripts/PredictedProportions.R")
 
 #read in the kernel fitting summary

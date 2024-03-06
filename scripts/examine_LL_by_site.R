@@ -1,7 +1,5 @@
 # script to calculate McFadden 1977's pseudo-R2. A subset of the code in bootstrap_data.ipynb
 
-setwd('~/Documents/Rutgers/Philippines clownfish/Oceanography_ROMS/CamotesROMS')
-
 ## Load functions
 require(data.table)
 require(bit64)
@@ -10,7 +8,7 @@ source("scripts/format_genetic_parentage_matrix.R")
 source("scripts/format_genetic_kernel_parentage_matrix.R")
 source("scripts/format_biophys_normalized_matrix.R")
 source("scripts/format_biophys_parentage_matrix.R")
-source("scripts/LL_biophys.R") # load the LL_biophys() function
+source("scripts/LL_biophys_bysite.R") # load the LL_biophys_bysite() function
 
 ## Load data
 load(file= "script_output/SurveyData/2022-01-20_AddDestTables.Rdata")
@@ -88,22 +86,27 @@ Data_parNEM_bioNEM_subsample <- list(BioPhysMat=as.matrix(biophys_norm_matrices_
 Data_parSWM_bioSWM_subsample <- list(BioPhysMat=as.matrix(biophys_norm_matrices_subsample$MonsoonBiophysMatNormSWM[1:nrow(sampled_reefs_vec),]), Assignments=as.matrix(genetic_parentage_matrices$GenMatSWM[1:nrow(genetic_parentage_matrices$GenMatSWM)-1,]), pop_size_vec=as.matrix(SurveyData[,.(avg_num_females=mean(num_females, na.rm = TRUE)), by=site][order(site)][, .(avg_num_females)]), sampled_reefs_vec=as.matrix(SiteIndexBioPhys[site %in% SurveyData[, site], .(index)]), prop_samp_vec=as.matrix(SurveyData[year == 2014,  .(prop_anem_samp)]),  unassigned_vec=as.matrix(genetic_parentage_matrices$GenMatSWM[nrow(genetic_parentage_matrices$GenMatSWM),]))
 Data_parNEMSWM_bio2012_4_subsample <- list(BioPhysMat=as.matrix(biophys_norm_matrices_subsample$FullBiophysMatNorm[1:nrow(sampled_reefs_vec),]), Assignments=(as.matrix(genetic_parentage_matrices$GenMatNEM[1:nrow(genetic_parentage_matrices$GenMatNEM)-1,])+as.matrix(genetic_parentage_matrices$GenMatSWM[1:nrow(genetic_parentage_matrices$GenMatSWM)-1,])), pop_size_vec=as.matrix(SurveyData[,.(avg_num_females=mean(num_females, na.rm = TRUE)), by=site][order(site)][, .(avg_num_females)]), sampled_reefs_vec=as.matrix(SiteIndexBioPhys[site %in% SurveyData[, site], .(index)]), prop_samp_vec=as.matrix(SurveyData[year == 2014,  .(prop_anem_samp)]), unassigned_vec=as.matrix(genetic_parentage_matrices$GenMatNEM[nrow(genetic_parentage_matrices$GenMatNEM),])+as.matrix(genetic_parentage_matrices$GenMatSWM[nrow(genetic_parentage_matrices$GenMatSWM),]))
 
-## Log likelilhoods for the full data
-LL_annual_annual <- LL_biophys(Data_par2012_bio2012)+LL_biophys(Data_par2013_bio2013)+LL_biophys(Data_par2014_bio2014) # year-specific
-LL_total_total <- LL_biophys(Data_par2012_4_bio2012_4) # multi-annual average
-LL_monsoonal_monsoonal <- LL_biophys(Data_parNEM_bioNEM)+LL_biophys(Data_parSWM_bioSWM) # monsoon-specific
-LL_monsoonal_total <- LL_biophys(Data_parNEMSWM_bio2012_4) # cross-monsoon average
+## Log likelilhoods for the full data, separately by site
+LL_annual_annual_2012 <- LL_biophys_bysite(Data_par2012_bio2012) # year-specific
+LL_annual_annual_2013 <- LL_biophys_bysite(Data_par2013_bio2013) # year-specific
+LL_annual_annual_2014 <- LL_biophys_bysite(Data_par2014_bio2014) # year-specific
+LL_total_total <- LL_biophys_bysite(Data_par2012_4_bio2012_4) # multi-annual average
+LL_monsoonal_monsoonal_NEM <- LL_biophys_bysite(Data_parNEM_bioNEM)
+LL_monsoonal_monsoonal_SWM <- LL_biophys_bysite(Data_parSWM_bioSWM) # monsoon-specific
+LL_monsoonal_total <- LL_biophys_bysite(Data_parNEMSWM_bio2012_4) # cross-monsoon average
 
-## McFadden's pseudo-R2 for the full data
-1-LL_annual_annual/LL_total_total # the annual pseudo-R2
-1-LL_monsoonal_monsoonal/LL_monsoonal_total #McFaddens pseudoR2 for the monsoonal model
+## barplot of negative log-likelihoods. lower is better fit. normalized to min 0
+toplot <- matrix(data = c(-LL_annual_annual_2012 + max(LL_annual_annual_2012),
+                          -LL_annual_annual_2013 + max(LL_annual_annual_2013),
+                          -LL_annual_annual_2014 + max(LL_annual_annual_2014),
+                          -LL_total_total + max(LL_total_total),
+                          -LL_monsoonal_monsoonal_NEM + max(LL_monsoonal_monsoonal_NEM),
+                          -LL_monsoonal_monsoonal_SWM + max(LL_monsoonal_monsoonal_SWM),
+                          -LL_monsoonal_total + max(LL_monsoonal_total)), 
+                 ncol=18, byrow = TRUE, dimnames = list(c('2012', '2013', '2014', 'Annual average', 'NEM', 'SWM', 'Monsoonal average'), SiteIndexBioPhys$site[sampled_reefs_vec]))
 
-## Log likelilhoods for the sumbsampled data
-LL_annual_annual_subsample <- LL_biophys(Data_par2012_bio2012_subsample)+LL_biophys(Data_par2013_bio2013_subsample)+LL_biophys(Data_par2014_bio2014_subsample)
-LL_total_total_subsample <- LL_biophys(Data_par2012_4_bio2012_4_subsample)
-LL_monsoonal_monsoonal_subsample <- LL_biophys(Data_parNEM_bioNEM_subsample)+LL_biophys(Data_parSWM_bioSWM_subsample)
-LL_monsoonal_total_subsample <- LL_biophys(Data_parNEMSWM_bio2012_4_subsample)
+# plot. next: order these N to S
+barplot(toplot, beside = TRUE, las = 2)
+par(mar=c(15,4,2,2)); barplot(toplot, beside = FALSE, las = 2)
 
-## McFadden's pseudo-R2 for the subsampled data
-1-LL_annual_annual_subsample/LL_total_total_subsample #McFaddens pseudoR2 for the annual model
-1-LL_monsoonal_monsoonal_subsample/LL_monsoonal_total_subsample #McFaddens pseudoR2 for the monsoonal model
+    
