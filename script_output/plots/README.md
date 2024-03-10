@@ -1,7 +1,10 @@
 # script_output/plots
+This folder has many of the plots included in the manuscript.
 
-- BootstrappedLikelihoodComparisonBothTimeScalesHistogramSubSampleSim.pdf: Figure 4 in the manuscript
-- Camotes_EKE_Avg.pdf: Figure S4 in the manuscript. Plot of eddy kinetic energy by site by years and monsoon. Produced by scripts/plotEKE_FigS2.R
-- GenPlusSimKernels.pdf: Figure 5 in the manuscript
-- GenPlusSimMDD.pdf: Figure 64 in the manuscript. Mean dispersal distances from observed and simulated dispersal kernels.
-- loglikelihood_differences_bysite.png: Figure S5 in the manuscript
+- Fig. 4: BootstrappedLikelihoodComparisonBothTimeScalesHistogramSubSampleSim.pdf
+- Fig. 5: GenPlusSimKernels.pdf
+- Fig. S2: SimmConnMatAllYearsNormSurveyedSites.png
+- Fig. S4: Camotes_EKE_Avg.pdf. Plot of eddy kinetic energy by site by years and monsoon. Produced by scripts/plotEKE_FigS2.R
+- Fig. S5: loglikelihood_differences_bysite.png. Produced by scripts/examine_LL_by_site.R.
+- Fig. S6: GenPlusSimMDD.pdf. Mean dispersal distances from observed and simulated dispersal kernels.
+- Fig. S7: SurfaceGrid.pdf
