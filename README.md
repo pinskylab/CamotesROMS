@@ -1,6 +1,8 @@
 # Camotes Sea ROMS model - biophysical simulations of larval Amphiprion clarkii connectivity
 Katrina Catalano's project calculating predicted dispersal using empirical oceanographic measurements and ROMS output for the Camotes Sea, Philippines, then comparing this to genetic estimates of connectivity.
 
+Catalano, K., E. Drenkard, E. Curchitser, A. Dedrick, M. Stuart, H. Montes Jr., and M. L. Pinsky (_in press_). The contribution of nearshore oceanography to temporal variation in larval dispersal. **Ecology**
+
 This repository contains:
 - notebooks/ Jupyter notebooks with R code used for analysis, in order of workflow
   - camotes_vertices_water.ipynb: Assign known source and destination sites in the study region to horizontal grid cells of the Camotes-ROMS model.  
@@ -13,7 +15,7 @@ This repository contains:
 - ROMS/ Data input and output from ROMS model.
 - scripts/ Raw R code versions of content in Jupyter notebooks, scripts called by notebooks, and a script to make Fig. S2 (eddy kinetic energy).
 
-Please contact malin.pinsky[at]rutgers.edu with questions.
+Please contact mpinsky[at]ucsc.edu with questions.
 
 ## Data Accessibility
 For data not on this git repo:
