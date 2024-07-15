@@ -15,6 +15,8 @@ This repository contains:
 - ROMS/ Data input and output from ROMS model.
 - scripts/ Raw R code versions of content in Jupyter notebooks, scripts called by notebooks, and a script to make Fig. S2 (eddy kinetic energy).
 
+Code was run in R with Jupyter notebooks.
+
 Please contact mpinsky[at]ucsc.edu with questions.
 
 ## Data Accessibility
