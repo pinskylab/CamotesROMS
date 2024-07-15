@@ -3,6 +3,8 @@ Katrina Catalano's project calculating predicted dispersal using empirical ocean
 
 Catalano, K., E. Drenkard, E. Curchitser, A. Dedrick, M. Stuart, H. Montes Jr., and M. L. Pinsky (_in press_). The contribution of nearshore oceanography to temporal variation in larval dispersal. **Ecology**
 
+[![DOI](https://zenodo.org/badge/138894621.svg)](https://zenodo.org/doi/10.5281/zenodo.12744525)
+
 This repository contains:
 - notebooks/ Jupyter notebooks with R code used for analysis, in order of workflow
   - camotes_vertices_water.ipynb: Assign known source and destination sites in the study region to horizontal grid cells of the Camotes-ROMS model.  
@@ -15,7 +17,7 @@ This repository contains:
 - ROMS/ Data input and output from ROMS model.
 - scripts/ Raw R code versions of content in Jupyter notebooks, scripts called by notebooks, and a script to make Fig. S2 (eddy kinetic energy).
 
-Code was run in R with Jupyter notebooks.
+Code was run in R with Jupyter notebooks on a laptop and on a Centos Linux workstation.
 
 Please contact mpinsky[at]ucsc.edu with questions.
 
