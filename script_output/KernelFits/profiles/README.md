@@ -1,4 +1,5 @@
 # script_output/KernelFits/profiles
+These may not be important and can probably be deleted.
 
 * LikelihoodProfile-Biophysical-2012-4-NarrowSearch-08DayPLD.csv: From Annotate server in katrinac/oceanography/script_output/KernelFits/profiles/
 * LikelihoodProfile-Biophysical-2012-NarrowSearch-08DayPLD.csv: From Annotate server in katrinac/oceanography/script_output/KernelFits/profiles/
