@@ -1,4 +1,5 @@
 # script_output/SurveyData
+Input data tables from survey genetics data for each time period of analysis, created by Format-Input-Survey-Data.R and used in fit_data.ipynb and bootstrap_data.ipynb.
 
 * 2021-11-04_InputSurveyData.Rdata: From Annotate server in katrinac/oceanography/script_output/SurveyData/for_likelihood_functions/
 * 20210625_ParentageMatrix2012-14ForROMSComp.csv
