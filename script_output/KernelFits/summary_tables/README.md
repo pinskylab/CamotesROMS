@@ -1,4 +1,5 @@
 # script_output/KernelFits/summary_tables
+These may not be important and can probably be deleted.
 
 * BootstrappedBiophysicalKernels08DayPLD.csv
 * BootstrappedBiophysicalKernels15DayPLD.csv
