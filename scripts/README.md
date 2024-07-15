@@ -17,7 +17,6 @@
 * format_biophys_parentage_matrix.R: Script to make input parentage matrix for all biophysical results- CAI included with Other as "unknown"
 * format_data.R: Format survey data and biophysical simulation data similarly to input into the kernel fitting likelihood function
 * format_genetic_kernel_parentage_matrix.R: Format the genetic parentage data for likelihood equation
-* format_genetic_parentage_matrix.R: Unclear, looks to be the same as the above file. I think fine to delete
 * ll_kt_both_bbmle.R: Function to estimate maximum likelihood k and theta using bbmle package
 * ll_kt_both_grid_search.R: Function to estimate maximum likelihood k and theta using brute force grid search, just to validate bbmle results in testing phase of analysis
 * plotEKE_FigS2.R: Make a plot of eddy kinetic energy by site by year and monsoon. Becomes Fig. S2 in the manuscript
